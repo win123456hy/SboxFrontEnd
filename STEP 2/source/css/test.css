@@ -1,0 +1,52 @@
+#ex{
+    color: red;
+}
+.test1{
+    color:blue;
+}
+#test2{
+    color:blue;
+}
+div p{
+    color: green;
+}
+h1,h2,h3,h4,h5{
+    font-size: 20pt;
+}
+#pseu::first-letter{
+    font-size: 30pt;
+}
+p[title]{
+    font-style: italic;
+}
+p[title="th2"]{
+    color: brown;
+    font-style: italic;
+}
+p[title~="th3"]{
+    color: burlywood;
+}
+p[title|="th4"]{
+    color:chartreuse;
+}
+p[title^="th5"]{
+    color:cyan;
+}
+p[title$="TH6"]{
+    color:darkviolet;
+}
+p[title*="TH7"]{
+    color:darkred;
+}
+#testfontfamily{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#testfontsize{
+    font-size: 30px;
+}
+#testfontstyle{
+    font-style: italic;
+}
+#testfontweight{
+    font-weight: 900;
+}

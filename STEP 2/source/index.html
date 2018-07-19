@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CSS learn</title>
+    <!-- 
+External Style Sheet
+-->   
+    <link rel="stylesheet" type="text/css" href="css/test.css">
+<!-- 
+Internal Style Sheet
+-->   
+<style>
+a{
+    color: blue;
+}
+</style>
+</head>
+<body>
+<p style="font-size: 40pt;text-align: center">Ba kiểu dùng CSS trong trang</p>
+Inline style sheet:
+<p style="color:red">Đạt</p>
+Internal Style Sheet:
+<br>
+<a href="https://toidicodedao.com/">Tôi đi code dạo</a>
+<a href="https://toidicodedao.com/">Tôi đi code dạo</a>
+<br>
+External Style Sheet:
+<p id="ex">Test</p>
+<p style="font-size: 40pt;text-align: center">Các Selector</p>
+<p style="font-size: 30pt;text-align: center">Normal</p>
+Selector class:
+<p class="test1">A</p>
+Selector id:
+<p id="test2">B</p>
+Selector phấn cấp:
+<div>
+    <p>
+        ALL
+    </p>
+</div>
+Selector nhiều thẻ:
+<h1>Đây là thẻ h1</h1>
+<h2>Đây là thẻ h2</h2>
+<h3>Đây là thẻ h3</h3>
+<h4>Đây là thẻ h4</h4>
+<h5>Đây là thẻ h5</h5>
+<p style="font-size: 30pt;text-align: center">Pseudo</p>
+Pseudo selector:
+<p id="pseu">Pseudo </p>
+<p style="font-size: 30pt;text-align: center">Attribute</p>
+Attribute selector:
+<br>
+TH1:
+<p title="th1">HIHI</p>
+TH2:
+<p title="th2">HIHI</p>
+TH3:
+<p title="th3 dd">HIHI</p>
+<p title="dfd">HIHI</p>
+<p title="th3">HIHI</p>
+TH4:
+<p title="th4-dd">HIHI</p>
+<p title="dfd">HIHI</p>
+<p title="th4">HIHI</p>
+TH5:
+<p title="th5-dd">HIHI</p>
+<p title="dfd">HIHI</p>
+<p title="th5">HIHI</p>
+TH6:
+<p title="c-TH6">HIHI</p>
+<p title="dfTH6">HIHI</p>
+<p title="TH6">HIHI</p>
+
+TH7:
+<p title="cTH7-dd">HIHI</p>
+<p title="dfTH7d">HIHI</p>
+<p title="TH7">HIHI</p>
+
+<p style="font-size: 40pt;text-align: center">Các thuộc tính CSS căn bản</p>
+Font-family:
+<p id="testfontfamily">Trần Quốc Đạt</p>
+Font-size:
+<p id="testfontsize">Trần Quốc Đạt</p>
+Font-style:
+<p id="testfontstyle">Trần Quốc Đạt</p>
+Font-weight:
+<p id="testfontweight">Trần Quốc Đạt</p>
+Width:
+<img width="100px" height="100px" src="img/thumb-1920-423529.jpg">
+<img width="300px" height="300px" src="img/thumb-1920-423529.jpg">
+<br>
+Letter-spacing:
+<p style="letter-spacing:10px">Chữ sẽ bị dãn cách như này</p>
+Line-height:
+<p style="line-height:10px;background: cornflowerblue">Chiều cao của dòng sẽ như thế này</p>
+<p style="line-height:50px;background: cornflowerblue">Chiều cao của dòng sẽ như thế này</p>
+Text-tranform:
+<p style="text-transform: uppercase">Đây là chữ thường khi mà dùng text-tranform:uppercase sẽ thành chữ hoa</p>
+Text-decoration:
+<p style="text-decoration: underline">Trang trí chữ kiểu gạch chân</p>
+Word-spacing:
+<p style="word-spacing: 100px">Giãn cách các từ trong văn bản như này</p>
+Background:
+<p style="background: blue;height: 100px">Nền màu xanh dương</p>
+Color:
+<p style="color: blueviolet">Màu chữ</p>
+<a href="https://toidicodedao.com/" style="color: blueviolet">Màu chữ thẻ a</a>
+<br>
+Margin:
+<p style="margin: 10px 200px;background: coral">I'm here</p>
+Padding:
+<p style="padding: 50px 50px;background: coral;height: 50px">I'm here</p>
+Border:
+<p style="border:solid 10px;height: 100px">Đường viền trong</p>
+Outline:
+<p style="outline:solid 10px;height: 100px">Đường viền ngoài</p>
+Float:
+<p style="float: right;">Nổi phải</p>
+<br>
+<br>
+<br>
+List-style:
+<ul style="list-style: upper-latin">
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+</ul>
+Opacity:
+<p style="opacity:0.5;background: red">Ahihihi</p>
+Visibility:
+<p style="visibility:visible;background: red">Ẳn hiện nào</p>
+<p style="visibility:hidden;background: red">Ẳn hiện nào</p>
+<p style="font-size: 40pt;text-align: center">Các thuộc tính CSS nâng cao</p>
+Position: fixed
+<p style="position: fixed;top: 10px; background: red;width:100px;height:100px;color: white">Cố định theo cửa sổ trình duyệt</p>
+<br>
+Position: absolute
+ <p style="position: absolute;top: 85px; left: 85px; background: red;color: white">Vị trí có quan hệ với body</p>
+ Position: relative
+ <p style="position: relative;;left:-100px;background: red;color: white">Vị trí có quan hệ với các thành phần ở trên, dưới và bao quanh nó</p>   
+ <p style="position: relative;top: 85px; left: 85px; background: red;color: white">Vị trí có quan hệ với các thành phần ở trên, dưới và bao quanh nó</p>
+</body>
+</html>
