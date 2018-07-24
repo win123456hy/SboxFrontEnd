@@ -1,0 +1,150 @@
+.bg{
+    margin: auto;
+    width: 272px;
+    height: 700px;
+    position: relative;
+    background-color: #262938;
+}
+.container{
+
+    width: 242px;
+    height: 700px;
+    margin-left: 15px;
+    background-color: #262938;
+}
+.container>.title{
+    margin-left: 6px;
+    display: flex;
+    align-items: center;
+    width: 232px;
+    height: 40px;
+    background-color: #262938;
+}
+.container>.imagebig{
+    width: 242px;
+    height: 160px;
+    background: url("../img/marimonro.jpg"); 
+    background-size: cover;
+    border-radius: 10px;
+}
+.container>.features{
+    width: 225px;
+    height: 400px;
+    margin-left: 7px;
+    background-color: #2e2f40;
+}
+.container>.features>.btn{
+    width: 225px;
+    height: 33px;
+    background-color: #2e2f40;
+    display: flex;
+    align-items: center;
+}
+.container>.features>.content{
+    
+    width: 225px;
+    height: 80px;
+    background: #2e2f40;
+}
+.container>.features>.friends{
+    width: 225px;
+    height: 70px;
+    background:#2e2f40;
+}
+.container>.features>.comment{
+    width: 225px;
+    height: 200px;
+    background:#2e2f40;
+}
+.title>img{
+    width: 11px;
+    height: 11px;
+}
+.title>p{
+    margin-left: 76px;
+    font-family: 'Archivo Narrow', sans-serif;
+   color: #f2f3f3;
+   font-size: 14px;
+}
+
+.features>.btn>#dowload{
+    margin-left: 10px;
+    border: 0px;
+    border-radius: 15%;
+    width: 32px;
+    height: 20px;
+    background: url("../img/download.svg") no-repeat center; 
+    background-size: 10px;
+    background-color: #363747;
+}
+.features>.btn>#comment{
+    margin-left: 36px;
+    border: 0px;
+    border-radius: 15%;
+    width: 32px;
+    height: 20px;
+    background: url("../img/chat.svg") no-repeat center; 
+    background-size: 10px;
+    background-color: #363747;
+}
+.features>.btn>#share{
+    margin-left: 6px;
+    border: 0px;
+    border-radius: 15%;
+    width: 32px;
+    height: 20px;
+    background: url("../img/share.svg") no-repeat center; 
+    background-size: 10px;
+    background-color: #363747;
+}
+.features>.btn>#number{
+    margin-left: 6px;
+    border: 0px;
+    border-radius: 7%;
+    width: 56px;
+    height: 20px;
+    background-color: #00ecca;
+}
+.features>.content>#artt{
+    margin-left: 10px;
+    font-family: 'Archivo Narrow', sans-serif;
+    color: #f2f3f3;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    line-height: 12px;
+
+}
+.features>.content>#artc{
+    margin-left: 10px;
+    font-family: 'Archivo Narrow', sans-serif;
+    color: #f2f3f3;
+    font-size: 10px;
+    opacity: 0.5;
+    letter-spacing: 0.8px;
+    line-height: 7px;
+}
+.features>.friends>p{
+    margin-left: 10px;
+    font-family: 'Archivo Narrow', sans-serif;
+    color: #f2f3f3;
+    font-size: 11px;
+    opacity: 0.7;
+    letter-spacing: 0.4px;
+    line-height: 12px;
+}
+.friends>.imagefriends>img{
+    border: 0px;
+    margin-left: 4px;
+    border-radius: 50%;
+   width: 20px;height: 20px;
+}
+#firstimg{
+    margin-left: 10px;
+}
+hr{
+  border:none;
+  height:0.3px;
+ background-color:white;
+   width:150px;
+   opacity: 0.1;
+}

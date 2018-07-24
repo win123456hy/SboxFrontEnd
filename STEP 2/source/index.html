@@ -139,7 +139,173 @@ Position: fixed
 Position: absolute
  <p style="position: absolute;top: 85px; left: 85px; background: red;color: white">Vị trí có quan hệ với body</p>
  Position: relative
- <p style="position: relative;;left:-100px;background: red;color: white">Vị trí có quan hệ với các thành phần ở trên, dưới và bao quanh nó</p>   
- <p style="position: relative;top: 85px; left: 85px; background: red;color: white">Vị trí có quan hệ với các thành phần ở trên, dưới và bao quanh nó</p>
+ <p style="position: relative;left:-100px;background: red;color: white">Vị trí có quan hệ với các thành phần ở trên, dưới và bao quanh nó</p>   
+Display: block
+<p style="display: block;">ddd</p>
+Display: inline
+<p style="display: inline;">ddd</p>
+<br>
+Display: inline-block
+<p style="display: inline-block;">ddd</p>
+Display: flex
+<div  style="display: flex;">
+    <p style="width: 1000px">1</p>
+    <p style="width: 1000px">2</p>
+    <p style="width: 1000px">3</p>
+</div>
+Display: flex and flex-direction
+<div  style="display: flex;flex-direction: column-reverse">
+    <p style="width: 1000px">1</p>
+    <p style="width: 1000px">2</p>
+    <p style="width: 1000px">3</p>
+</div>
+Display: flex and flex-wrap
+<div  style="display: flex;flex-wrap:wrap">
+    <p style="width: 1000px">1</p>
+    <p style="width: 1000px">2</p>
+    <p style="width: 1000px">3</p>
+</div>
+Display: flex and flex-flow
+<div  style="display: flex;flex-flow:column">
+    <p style="width: 1000px">1</p>
+    <p style="width: 1000px">2</p>
+    <p style="width: 1000px">3</p>
+</div>
+Display: flex and justify-content:
+<br>
+-justify-content:flex-start
+<div  style="display: flex;justify-content:flex-start">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+</div>
+-justify-content:flex-end
+<div  style="display: flex;justify-content: flex-end">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+</div>
+-justify-content:center
+<div  style="display: flex;justify-content: center">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+</div>
+-justify-content:space-between
+<div  style="display: flex;justify-content: space-between">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+</div>
+-justify-content:space-around
+<div  style="display: flex;justify-content: space-around">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+</div>
+Background gradient
+<br>
+-background: linear-gradient
+<div style="width: 100px;height: 100px;background: linear-gradient(to left,red,yellow)"></div>
+-background: repeating-linear-gradient
+<div style="width: 100px;height: 100px;background:repeating-linear-gradient(red,yellow 10%,green 20%)"></div>
+-background: radial-gradient
+<div style="width: 100px;height: 100px;background: radial-gradient(red, yellow, green)"></div>
+-background: repeating-radial-gradient
+<div style="width: 100px;height: 100px;background: repeating-radial-gradient(red, yellow 10%,green 20%)"></div>
+Text-shadow
+<p style="font-size: 20px;
+font-weight: bold;text-shadow:2px 2px 2px #cc0000">Text shadow bình thường</p>
+<p style="font-size: 20px;
+font-weight: bold;text-shadow:10px 2px 2px #cc0000">Text shadow ngang</p>
+<p style="font-size: 20px;
+font-weight: bold;text-shadow:2px 10px 2px #cc0000">Text shadow dọc</p>
+<p style="font-size: 20px;
+font-weight: bold;text-shadow:2px 2px 10px #cc0000">Text shadow với độ nhoè lớn</p>
+Box-shadow
+<div style="background-color: #cc0000;box-shadow: 30px 30px;width: 200px;height: 200px"></div>
+<br>
+<br>
+Transform
+<br>
+-rotate
+<br>
+<br>
+<div style="transform:rotate(72deg) ;background-color: #cc0000;width: 200px;height: 200px"></div>
+<br>
+-scale
+<br>
+<div style="transform:scale(0.5,0.5) ;background-color: #cc0000;width: 200px;height: 200px"></div>
+<br>
+-scale
+<br>
+<div style="transform:scale(0.5,0.5) ;background-color: #cc0000;width: 200px;height: 200px"></div>
+<br>
+-skew
+<br>
+<div style="transform:skew(-30deg,-10deg) ;background-color: #cc0000;width: 200px;height: 200px"></div>
+
+<br>
+-translate
+<br>
+<div style="transform:translate(500px,50px) ;background-color: #cc0000;width: 200px;height: 200px"></div>
+<br>
+<br>
+
+Important 
+<p id="testimportant" style="color: red;">Hi. How are you?</p>
+@keyframe
+
+<div id="keyframestest" style="background-color: #cc0000;width: 200px;height: 200px"></div>
+
+Animation-bounce
+<div id="animationbouncetest" style="background-color: #cc0000;width: 200px;height: 200px"></div>
+<br>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+Animation-fade
+<br>
+-fadein
+<div id="fadeintest" style="background-color: #cc0000;width: 200px;height: 200px"></div>
+-fadeout
+<div id="fadeouttest" style="background-color: #cc0000;width: 200px;height: 200px"></div>
+
+Animation-slide
+<br>
+-slide up
+<div class="box">
+    <div class="hid-box">
+      <p>This is a quick demo of slide-up effect using CSS animation when hover the box. No JS required!</p>
+    </div>
+  </div>
+-slide down
+<div class="box1">
+    <div class="hid-box1">
+      <p>This is a quick demo of slide-up effect using CSS animation when hover the box. No JS required!</p>
+    </div>
+  </div>
 </body>
+Animation-Zoom
+<br><br><br><br>
+-zoom in
+<br><br><br><br>
+<br><br><br><br><br>
+
+<div id="zoomintest" style="background-color: #cc0000;width: 200px;height: 200px"></div>
+<br><br><br><br><br>
+<br><br><br><br>
+-zoom out
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+<div id="zoomouttest" style="background-color: #cc0000;width: 200px;height: 200px"></div>
+
 </html>

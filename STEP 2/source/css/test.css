@@ -50,3 +50,92 @@ p[title*="TH7"]{
 #testfontweight{
     font-weight: 900;
 }
+#testimportant{
+    color: blue !important;
+}
+#keyframestest {
+
+    animation:keyframet 5s infinite;
+}
+@keyframes keyframet{
+    0%{background-color: blue;}
+    50%{background-color: green;}
+    100%{background-color: yellow;}
+}
+#animationbouncetest{
+    animation:bounce 5s infinite;
+}
+@keyframes bounce{
+    0%{opacity: 0; transform: translateY(30px); }
+    10%{opacity: 0.3; transform: translateY(-30px); }
+    30%{opacity: 0.5; transform: translateY(100px); }
+    100%{opacity: 1; transform: translateY(1px); }
+
+}
+#fadeintest{
+    animation:fadein 5s infinite;
+
+}
+#fadeouttest{
+    animation:fadeout 5s infinite;
+
+}
+@keyframes fadein{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes fadeout{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+  .box {
+    height: 200px;
+    width: 300px;
+    overflow: hidden;
+    border: 1px solid red;
+    background: #ff0;
+  }
+  .hid-box {
+    top: 100%;
+    position: relative;
+    transition: all .3s ease-out;
+    background: #428bca;
+    height: 100%;
+  }
+  
+  .box:hover > .hid-box{
+    top: 0;
+  }
+  .box1 {
+    height: 200px;
+    width: 300px;
+    overflow: hidden;
+    border: 1px solid red;
+    background: #ff0;
+  }
+  .hid-box1 {
+    top: 0;
+    position: relative;
+    transition: all .3s ease-out;
+    background: #428bca;
+    height: 100%;
+  }
+  
+  .box1:hover > .hid-box1{
+    top: 100%;
+  }
+  #zoomintest{
+      animation: zoomin 5s infinite;
+  }
+  @keyframes zoomin{
+      0%{transform: scale(0.1,0.1);}
+      100%{transform: scale(2,2);}
+  }
+  #zoomouttest{
+    animation: zoomout 5s infinite;
+}
+@keyframes zoomout{
+    0%{transform: scale(2,2);}
+    100%{transform: scale(0.1,0.1);}
+}
