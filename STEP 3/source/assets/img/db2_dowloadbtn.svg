@@ -1,0 +1,32 @@
+<svg id="Group_4" data-name="Group 4" xmlns="http://www.w3.org/2000/svg" viewBox="-292 -977 34 34">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #ffefdb;
+      }
+
+      .cls-2 {
+        stroke: #ff6824;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        fill: #ff6824;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_4" data-name="Rectangle 4" class="cls-1" width="34" height="34" rx="13" transform="translate(-292 -977)"/>
+  <g id="Rectangle_10" data-name="Rectangle 10" class="cls-2" transform="translate(-283 -968)">
+    <rect class="cls-4" width="17" height="17" rx="3"/>
+    <rect class="cls-5" x="1" y="1" width="15" height="15" rx="2"/>
+  </g>
+  <path id="Subtraction_1" data-name="Subtraction 1" class="cls-3" d="M29.85,7.15h0L26,3.3h2.2V0h3.3V3.3h2.2Z" transform="translate(-304.3 -963)"/>
+</svg>

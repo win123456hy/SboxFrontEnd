@@ -1,0 +1,23 @@
+<svg id="Group_1" data-name="Group 1" xmlns="http://www.w3.org/2000/svg" viewBox="-1027 -1132 19 10">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b6b6b6;
+        stroke: #b6b6b6;
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Rectangle_1" data-name="Rectangle 1" class="cls-1" transform="translate(-1027 -1132)">
+    <rect class="cls-2" width="14" height="10" rx="2"/>
+    <rect class="cls-3" x="0.5" y="0.5" width="13" height="9" rx="1.5"/>
+  </g>
+  <path id="Subtraction_1" data-name="Subtraction 1" class="cls-1" d="M3.364,14.157l0,0L.707,11.5,3.364,8.843v5.314Z" transform="translate(-1011.864 -1138)"/>
+</svg>

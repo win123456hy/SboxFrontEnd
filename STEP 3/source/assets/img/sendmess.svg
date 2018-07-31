@@ -1,0 +1,28 @@
+<svg id="Group_5" data-name="Group 5" xmlns="http://www.w3.org/2000/svg" viewBox="-25 -510 70 70">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2f9ff;
+        stroke: #e3f1ff;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #2290ff;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Ellipse_2" data-name="Ellipse 2" class="cls-1" transform="translate(-25 -510)">
+    <circle class="cls-3" cx="35" cy="35" r="35"/>
+    <circle class="cls-4" cx="35" cy="35" r="33.5"/>
+  </g>
+  <path id="Subtraction_4" data-name="Subtraction 4" class="cls-2" d="M65.98,19H65.2V10.43L75.7,9.5l.11,0c-.013-.044-3.583-.261-10.61-.643V0h1.051L85.2,8.043V8.78Z" transform="translate(-65.2 -484)"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-768.108 -1313 16.219 16">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-3 {
+        stroke: #2290ff;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="logout" transform="translate(123.504 -309.5)">
+    <g id="Group_1" data-name="Group 1">
+      <path id="Subtraction_1" data-name="Subtraction 1" class="cls-1" d="M7.5,19.864A7,7,0,0,1,3.1,7.417l4.6,4.6L12.115,7.6A7,7,0,0,1,7.5,19.864Z" transform="translate(-891 -1008.364)"/>
+      <circle id="Ellipse_2" data-name="Ellipse 2" class="cls-2" cx="6.5" cy="6.5" r="6.5" transform="translate(-890 -1002)"/>
+    </g>
+    <line id="Line_1" data-name="Line 1" class="cls-3" y2="8" transform="translate(-883.5 -1003.5)"/>
+  </g>
+</svg>

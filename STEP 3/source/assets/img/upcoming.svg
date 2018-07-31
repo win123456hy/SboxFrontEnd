@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1155 -1213 14 15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #3f3d3f;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 2px;
+      }
+
+      .cls-2, .cls-5 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #3f3d3f;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Rectangle_1" data-name="Rectangle 1" class="cls-1" transform="translate(-1155 -1213)">
+    <rect class="cls-4" width="14" height="15"/>
+    <rect class="cls-5" x="1" y="1" width="12" height="13"/>
+  </g>
+  <line id="Line_1" data-name="Line 1" class="cls-2" x2="13" transform="translate(-1154.5 -1208.5)"/>
+  <g id="Ellipse_1" data-name="Ellipse 1" class="cls-3" transform="translate(-1152 -1205)">
+    <circle class="cls-4" cx="1.5" cy="1.5" r="1.5"/>
+    <circle class="cls-5" cx="1.5" cy="1.5" r="1"/>
+  </g>
+  <g id="Ellipse_2" data-name="Ellipse 2" class="cls-3" transform="translate(-1147 -1205)">
+    <circle class="cls-4" cx="1.5" cy="1.5" r="1.5"/>
+    <circle class="cls-5" cx="1.5" cy="1.5" r="1"/>
+  </g>
+</svg>

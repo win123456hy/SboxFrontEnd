@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-258 -1169 34 34">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #e1faf4;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #5ccfb5;
+      }
+
+      .cls-2 {
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        fill: #5ccfb5;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_4" data-name="Group 4" transform="translate(34 -135)">
+    <rect id="Rectangle_2" data-name="Rectangle 2" class="cls-1" width="34" height="34" rx="13" transform="translate(-292 -1034)"/>
+    <g id="Group_1" data-name="Group 1" transform="translate(-57 112)">
+      <path id="Union_1" data-name="Union 1" class="cls-2" d="M6.234,12.623.384,6.773A1.3,1.3,0,0,1,0,5.85V1.3A1.3,1.3,0,0,1,1.3,0H5.85a1.292,1.292,0,0,1,.916.377l5.85,5.85A1.313,1.313,0,0,1,13,7.15a1.271,1.271,0,0,1-.384.916l-4.55,4.55A1.271,1.271,0,0,1,7.15,13,1.292,1.292,0,0,1,6.234,12.623Z" transform="translate(-224 -1135)"/>
+      <g id="Ellipse_1" data-name="Ellipse 1" class="cls-3" transform="translate(-220.947 -1132.278)">
+        <circle class="cls-4" cx="0.994" cy="0.994" r="0.994"/>
+        <circle class="cls-5" cx="0.994" cy="0.994" r="0.494"/>
+      </g>
+    </g>
+  </g>
+</svg>

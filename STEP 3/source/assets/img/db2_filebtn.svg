@@ -1,0 +1,43 @@
+<svg id="Group_4" data-name="Group 4" xmlns="http://www.w3.org/2000/svg" viewBox="-137 -1174 34 34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fcedff;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke: #ca55e2;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-width: 2px;
+      }
+
+      .cls-3, .cls-4, .cls-6 {
+        fill: none;
+      }
+
+      .cls-4 {
+        stroke-width: 3px;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_3" data-name="Rectangle 3" class="cls-1" width="34" height="34" rx="13" transform="translate(-137 -1174)"/>
+  <g id="Group_3" data-name="Group 3" transform="translate(209 -15.5)">
+    <g id="Rectangle_12" data-name="Rectangle 12" class="cls-2" transform="translate(-336 -1147)">
+      <rect class="cls-5" width="15" height="13" rx="2"/>
+      <rect class="cls-6" x="1" y="1" width="13" height="11" rx="1"/>
+    </g>
+    <line id="Line_4" data-name="Line 4" class="cls-3" x2="14" transform="translate(-335.5 -1142.5)"/>
+    <line id="Line_5" data-name="Line 5" class="cls-4" y2="2" transform="translate(-332.5 -1148.5)"/>
+    <line id="Line_6" data-name="Line 6" class="cls-4" y2="2" transform="translate(-324.5 -1148.5)"/>
+  </g>
+</svg>

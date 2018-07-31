@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-716.071 -1280 13.799 11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2290ff;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #2290ff;
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="profile" transform="translate(49.2 -331)">
+    <g id="Group_1" data-name="Group 1" transform="translate(2 1.8)">
+      <path id="Subtraction_2" data-name="Subtraction 2" class="cls-1" d="M11.963,2.56H0C.337,1.1,2.909,0,5.981,0s5.643,1.1,5.981,2.559Z" transform="translate(-766.642 -943.5)"/>
+      <line id="Line_2" data-name="Line 2" class="cls-2" x2="13" transform="translate(-767.2 -940.3)"/>
+    </g>
+    <g id="Ellipse_2" data-name="Ellipse 2" class="cls-1" transform="translate(-761 -949)">
+      <circle class="cls-3" cx="2.75" cy="2.75" r="2.75"/>
+      <circle class="cls-4" cx="2.75" cy="2.75" r="2.25"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg id="Group_7" data-name="Group 7" xmlns="http://www.w3.org/2000/svg" viewBox="-778 -1430 38 43">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff2e0;
+      }
+
+      .cls-2 {
+        fill: #ffa621;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_4" data-name="Rectangle 4" class="cls-1" width="38" height="43" rx="5" transform="translate(-778 -1430)"/>
+  <g id="Group_2" data-name="Group 2" transform="translate(-175.715 -92.5)">
+    <path id="Subtraction_1" data-name="Subtraction 1" class="cls-2" d="M9.42,15.5H9.357L5.386,10.538,0,3.808l.068-.046L.3,3.61,5.386.194,5.675,0h8.117l.035.023h0L13.793,0h.066l5.125,3.439v.438l-5.066,6.33L9.683,15.5H9.42L5.386,10.437,9.42,15.5Z" transform="translate(-592.285 -1323.5)"/>
+  </g>
+</svg>

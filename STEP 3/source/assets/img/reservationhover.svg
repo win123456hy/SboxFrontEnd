@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-825 -1339 11 14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2290ff;
+      }
+    </style>
+  </defs>
+  <path id="reservation" class="cls-1" d="M43.258,14.5H42.5V2A1.5,1.5,0,0,1,44,.5h8A1.5,1.5,0,0,1,53.5,2V14.5h-.753l-4.57-2.476c-.214.109-1.185.6-4.919,2.476Z" transform="translate(-867.5 -1339.5)"/>
+</svg>

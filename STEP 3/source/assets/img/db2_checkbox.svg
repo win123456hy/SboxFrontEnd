@@ -1,0 +1,16 @@
+<svg id="Group_1" data-name="Group 1" xmlns="http://www.w3.org/2000/svg" viewBox="-536 -1203 18 18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #198cff;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-1" cx="9" cy="9" r="9" transform="translate(-536 -1203)"/>
+  <path id="ic_done_24px" class="cls-2" d="M5.693,9.939,3.973,8.22,3.4,8.793l2.293,2.293,4.913-4.913L10.032,5.6Z" transform="translate(-534.189 -1202.442)"/>
+</svg>

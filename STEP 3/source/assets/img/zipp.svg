@@ -1,0 +1,110 @@
+<svg id="Group_10" data-name="Group 10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-553 -1514.8 38 45.8">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #e9ebed;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4, .cls-7 {
+        stroke: #627282;
+      }
+
+      .cls-4 {
+        stroke-width: 2px;
+      }
+
+      .cls-5 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-6, .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        stroke: #fff;
+      }
+
+      .cls-7 {
+        stroke-width: 1.5px;
+      }
+
+      .cls-8 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="4" height="21"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect class="cls-1" width="4" height="23"/>
+    </clipPath>
+  </defs>
+  <rect id="Rectangle_6" data-name="Rectangle 6" class="cls-2" width="38" height="43" rx="5" transform="translate(-553 -1512)"/>
+  <g id="Group_9" data-name="Group 9" transform="translate(66 -225)">
+    <g id="Group_8" data-name="Group 8">
+      <g id="Repeat_Grid_1" data-name="Repeat Grid 1" class="cls-3" transform="translate(-603.5 -1289.5)">
+        <g transform="translate(586.5 1288.5)">
+          <line id="Line_12" data-name="Line 12" class="cls-4" x2="4" transform="translate(-586.5 -1288.5)"/>
+        </g>
+        <g transform="translate(586.5 1292.5)">
+          <line id="Line_12-2" data-name="Line 12" class="cls-4" x2="4" transform="translate(-586.5 -1288.5)"/>
+        </g>
+        <g transform="translate(586.5 1296.5)">
+          <line id="Line_12-3" data-name="Line 12" class="cls-4" x2="4" transform="translate(-586.5 -1288.5)"/>
+        </g>
+        <g transform="translate(586.5 1300.5)">
+          <line id="Line_12-4" data-name="Line 12" class="cls-4" x2="4" transform="translate(-586.5 -1288.5)"/>
+        </g>
+        <g transform="translate(586.5 1304.5)">
+          <line id="Line_12-5" data-name="Line 12" class="cls-4" x2="4" transform="translate(-586.5 -1288.5)"/>
+        </g>
+        <g transform="translate(586.5 1308.5)">
+          <line id="Line_12-6" data-name="Line 12" class="cls-4" x2="4" transform="translate(-586.5 -1288.5)"/>
+        </g>
+      </g>
+      <g id="Repeat_Grid_2" data-name="Repeat Grid 2" class="cls-5" transform="translate(-599.5 -1287.5)">
+        <g transform="translate(586.5 1288.5)">
+          <line id="Line_12-7" data-name="Line 12" class="cls-4" x2="4" transform="translate(-586.5 -1288.5)"/>
+        </g>
+        <g transform="translate(586.5 1292.5)">
+          <line id="Line_12-8" data-name="Line 12" class="cls-4" x2="4" transform="translate(-586.5 -1288.5)"/>
+        </g>
+        <g transform="translate(586.5 1296.5)">
+          <line id="Line_12-9" data-name="Line 12" class="cls-4" x2="4" transform="translate(-586.5 -1288.5)"/>
+        </g>
+        <g transform="translate(586.5 1300.5)">
+          <line id="Line_12-10" data-name="Line 12" class="cls-4" x2="4" transform="translate(-586.5 -1288.5)"/>
+        </g>
+        <g transform="translate(586.5 1304.5)">
+          <line id="Line_12-11" data-name="Line 12" class="cls-4" x2="4" transform="translate(-586.5 -1288.5)"/>
+        </g>
+        <g transform="translate(586.5 1308.5)">
+          <line id="Line_12-12" data-name="Line 12" class="cls-4" x2="4" transform="translate(-586.5 -1288.5)"/>
+        </g>
+      </g>
+    </g>
+    <g id="Rectangle_7" data-name="Rectangle 7" class="cls-6" transform="translate(-604 -1289.8)">
+      <rect class="cls-8" width="9" height="3.4"/>
+      <rect class="cls-1" x="0.5" y="0.5" width="8" height="2.4"/>
+    </g>
+    <line id="Line_13" data-name="Line 13" class="cls-4" x2="4" transform="translate(-603.5 -1265.5)"/>
+    <line id="Line_14" data-name="Line 14" class="cls-4" x2="4" transform="translate(-599.5 -1265.5)"/>
+    <line id="Line_15" data-name="Line 15" class="cls-4" x2="4" transform="translate(-603.5 -1263.5)"/>
+    <line id="Line_16" data-name="Line 16" class="cls-4" x2="4" transform="translate(-599.5 -1263.5)"/>
+    <line id="Line_17" data-name="Line 17" class="cls-4" x2="4" transform="translate(-603.5 -1261.5)"/>
+    <line id="Line_18" data-name="Line 18" class="cls-4" x2="4" transform="translate(-599.5 -1261.5)"/>
+    <g id="Rectangle_8" data-name="Rectangle 8" class="cls-7" transform="translate(-603.5 -1261)">
+      <rect class="cls-8" width="8" height="5"/>
+      <rect class="cls-1" x="0.75" y="0.75" width="6.5" height="3.5"/>
+    </g>
+  </g>
+</svg>

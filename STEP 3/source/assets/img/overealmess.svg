@@ -1,0 +1,36 @@
+<svg id="Group_4" data-name="Group 4" xmlns="http://www.w3.org/2000/svg" viewBox="91 -439 70 70">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2f9ff;
+        stroke: #e3f1ff;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #2290ff;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Ellipse_1" data-name="Ellipse 1" class="cls-1" transform="translate(91 -439)">
+    <circle class="cls-3" cx="35" cy="35" r="35"/>
+    <circle class="cls-4" cx="35" cy="35" r="33.5"/>
+  </g>
+  <g id="Group_3" data-name="Group 3" transform="translate(-147 -10)">
+    <g id="Group_1" data-name="Group 1">
+      <path id="Rectangle_1" data-name="Rectangle 1" class="cls-2" d="M1,0H15a1,1,0,0,1,1,1V11a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V1A1,1,0,0,1,1,0Z" transform="translate(263 -404)"/>
+      <path id="Path_1" data-name="Path 1" class="cls-2" d="M262-384.9v6.8l4-6.8Z" transform="translate(1 -9)"/>
+      <path id="Rectangle_2" data-name="Rectangle 2" class="cls-2" d="M1,0H15a1,1,0,0,1,1,1V11a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V1A1,1,0,0,1,1,0Z" transform="translate(263 -404)"/>
+      <path id="Path_2" data-name="Path 2" class="cls-2" d="M262-384.9v6.8l4-6.8Z" transform="translate(1 -9)"/>
+    </g>
+    <path id="Subtraction_1" data-name="Subtraction 1" class="cls-2" d="M19,23.9l0,0L15.53,18H3V15H16V7h2a1,1,0,0,1,1,1V23.9Z" transform="translate(264 -407)"/>
+  </g>
+</svg>

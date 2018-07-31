@@ -1,0 +1,18 @@
+<svg id="Group_1" data-name="Group 1" xmlns="http://www.w3.org/2000/svg" viewBox="-1273 -1472 218 218">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #198cff;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #eaeef1;
+        stroke-width: 10px;
+      }
+    </style>
+  </defs>
+  <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-1" cx="109" cy="109" r="109" transform="translate(-1273 -1472)"/>
+  <line id="Line_1" data-name="Line 1" class="cls-2" y2="60" transform="translate(-1163.5 -1392.5)"/>
+  <line id="Line_2" data-name="Line 2" class="cls-2" x1="60" transform="translate(-1193.5 -1362.5)"/>
+</svg>

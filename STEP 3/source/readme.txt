@@ -1,0 +1,1 @@
+kích thu?c màn hình:1366x768

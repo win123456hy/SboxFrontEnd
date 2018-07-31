@@ -1,0 +1,31 @@
+<svg id="Group_7" data-name="Group 7" xmlns="http://www.w3.org/2000/svg" viewBox="98 -556 70 70">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2f9ff;
+        stroke: #e3f1ff;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #2290ff;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Ellipse_3" data-name="Ellipse 3" class="cls-1" transform="translate(98 -556)">
+    <circle class="cls-3" cx="35" cy="35" r="35"/>
+    <circle class="cls-4" cx="35" cy="35" r="33.5"/>
+  </g>
+  <g id="Group_6" data-name="Group 6" transform="translate(87.791 -110.5)">
+    <path id="Subtraction_6" data-name="Subtraction 6" class="cls-2" d="M33.5,18.5l0,0L24.209,9.212,33.421,0,33.5,18.5Z" transform="translate(8 -418.5)"/>
+    <path id="Intersection_1" data-name="Intersection 1" class="cls-2" d="M14.5,15.168a51.876,51.876,0,0,0,5.667-.792C26.176,13.208,31.252,11.224,32.8,9.44h.117c.826,4.327-3.341,10.26-10.2,14.06a25.679,25.679,0,0,1-8.22,2.939Z" transform="translate(26 -429.94)"/>
+  </g>
+</svg>

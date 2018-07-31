@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="166 -198 930 91">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #95989a;
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #f28484;
+      }
+
+      .cls-3 {
+        fill: #f3887f;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.923" y1="0.648" x2="0.11" y2="0.593" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fea22f"/>
+      <stop offset="1" stop-color="#ec638e"/>
+    </linearGradient>
+  </defs>
+  <g id="Rectangle_1" data-name="Rectangle 1" class="cls-1" transform="translate(166 -198)">
+    <rect class="cls-4" width="930" height="91"/>
+    <rect class="cls-5" x="0.5" y="0.5" width="929" height="90"/>
+  </g>
+  <g id="Group_1" data-name="Group 1" transform="translate(58 -144)">
+    <path id="Rectangle_2" data-name="Rectangle 2" class="cls-2" d="M10,0H63A12,12,0,0,1,75,12V43a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V10A10,10,0,0,1,10,0Z" transform="translate(339 -6)"/>
+    <path id="Subtraction_1" data-name="Subtraction 1" class="cls-3" d="M41.265,61.134h-21V38.006L40.714,25.133h.551v36Z" transform="translate(400.234 -24.634)"/>
+  </g>
+</svg>

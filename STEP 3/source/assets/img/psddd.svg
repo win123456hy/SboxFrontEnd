@@ -1,0 +1,18 @@
+<svg id="Group_6" data-name="Group 6" xmlns="http://www.w3.org/2000/svg" viewBox="-542 -1424 38 43">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ebf5fd;
+      }
+
+      .cls-2 {
+        fill: #1a8cff;
+        font-size: 18px;
+        font-family: SegoeUI-Semibold, Segoe UI;
+        font-weight: 600;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_3" data-name="Rectangle 3" class="cls-1" width="38" height="43" rx="5" transform="translate(-542 -1424)"/>
+  <text id="Ps" class="cls-2" transform="translate(-536 -1414)"><tspan x="3.859" y="19">Ps</tspan></text>
+</svg>
