@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div>
+            <button onclick="add()">Thêm</button>
+            <p id="status">Đang thêm</p>
+            <img id="imgstatus" width="50px" height="50px" src="assets/img/tenor.gif" />
+    </div>
+    <script>
+
+        function add() {
+            document.getElementById("status").style.visibility = "visible";
+            document.getElementById("imgstatus").style.visibility = "visible";
+            setTimeout(function () {
+                var x = Math.floor((Math.random() * 10) + 1);
+                if(x%2==0){
+                document.getElementById("status").innerHTML="Đã thêm";
+                document.getElementById("imgstatus").style.visibility = "hidden";
+            }
+                else{
+                document.getElementById("status").innerHTML="Không thể thêm";
+                document.getElementById("imgstatus").style.visibility = "hidden";
+                }
+            }, 5000);
+        }
+    </script>
+</body>
+
+</html>

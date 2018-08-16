@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="mybody">
+    <script>
+        var programleaguage = ['js', 'css', 'html', 'c#', 'java', 'c++', 'pascal', 'ruby', 'r', 'python', 'nodejs'];
+        function createList() {
+
+            for (let index = 0; index < programleaguage.length; index++) {
+                var p = document.createElement("label");
+                p.setAttribute("class", "switch");
+                var t = document.createTextNode(programleaguage[index]);
+
+                /*   var text = document.createElement("p");
+                  text.appendChild(t); */
+                i = document.createElement("input");
+                i.setAttribute("type", "checkbox");
+                i.setAttribute("id", "checkbox" + index);
+                var s = document.createElement("span");
+                s.setAttribute("class", "slider");
+                s.appendChild(t);
+                p.appendChild(i);
+                p.appendChild(s);
+                // p.appendChild(text);
+                var brr = document.createElement("br");
+                document.body.appendChild(p);
+                document.body.appendChild(brr);
+            }
+        }
+        createList();
+        setInterval(checkList, 1000);
+
+        function checkList() {
+            var lg = document.getElementById("lg");
+            if (lg) {
+                document.body.removeChild(lg);
+            }
+            let leaguagechoose = [];
+            for (let index = 0; index < programleaguage.length; index++) {
+                var ch = document.getElementById("checkbox" + index);
+                if (ch.checked)
+                    leaguagechoose.push(programleaguage[index]);
+            }
+            
+            var p = document.createElement("p");
+            p.setAttribute("id","lg");
+            p.style.fontSize="36px";
+            var t = document.createTextNode("Các ngôn ngữ bạn đã chọn là:"+leaguagechoose);
+            p.appendChild(t);
+            var mybody = document.getElementById("mybody");
+            mybody.insertBefore(p, mybody.lastChild);
+        }
+    </script>
+</body>
+
+</html>

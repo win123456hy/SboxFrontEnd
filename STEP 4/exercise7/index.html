@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <img src="assets/img/1200px-Google_2015_logo.svg.png" />
+    <input id="search" type="search" onkeyup="search()" />
+    <div>
+        <ul id="listkey"></ul>
+    </div>
+    <script>
+
+        var arraykey = ["youtube", "facebook", "amazon", "gmail", "google", "craigslist", "ebay", "netflix", "walmart", "googlemaps", "yahoomail", "yahoo", "googletranslate", "weather", "facebooklogin", "homedepot", "maps", "googledocs", "translate", "pornhub", "target", "paypal", "uspstracking", "lowes", "hotmail", "calculator", "googledrive", "bestbuy", "pinterest", "bankofamerica", "pandora", "youtubetomp", "instagram", "wellsfargo", "googleclassroom", "zillow", "speedtest", "linkedin", "twitter", "cnn", "mapquest", "indeed", "costco", "upstracking", "capitalone", "usps", "youtube", "amazonprime", "pizzahut", "kohls", "roblox", "espn", "xnxx", "americanairlines", "chase", "xvideos", "dominos", "verizon", "news", "foxnews", "hulu", "spotify", "expedia", "etsy", "msn", "macys", "airbnb", "steam", "porn", "turbotax", "bedbathandbeyond", "dropbox", "gamestop", "you", "groupon", "thesaurus", "southwest", "aolmail", "reddit", "unitedairlines", "papajohns", "fedextracking", "walgreens", "twitch", "googlescholar", "ikea", "autozone", "soundcloud", "movies", "creditkarma", "jcpenney", "imdb", "southwestairlines", "powerball", "comcast", "donaldtrump", "minecraft", "bing", "harborfreight", "traductor"];
+        function search() {
+            var liold = document.getElementById("listkey");
+            while (liold.firstChild) {
+                liold.removeChild(liold.firstChild);
+            }
+
+            var keyword = document.getElementById("search").value;
+            if (keyword.trim() == "")
+                return;
+            var countfalse = 0;
+            for (let index = 0; index < arraykey.length; index++) {
+                if (arraykey[index].startsWith(keyword.trim())) {
+                    createDropList(arraykey[index]);
+                }
+                else {
+                    countfalse++;
+                }
+            }
+            if (countfalse == arraykey.length) {
+                for (let index = 0; index < arraykey.length; index++) {
+                    if (arraykey[index].includes(keyword.trim())) {
+                        createDropList(arraykey[index]);
+                    }
+                }
+            }
+
+        }
+
+
+        function createDropList(key) {
+            var li = document.createElement("li");
+            li.setAttribute("id", "li_item");
+            var text = document.createTextNode(key);
+            li.appendChild(text);
+            var ul = document.getElementById("listkey");
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+</head>
+
+<body>
+    Ngày:
+    <input id="day" type="number" name="day" />
+    <br> Tháng:
+    <input id="month" type="number" name="month" />
+    <br> Năm
+    <input id="year" type="number" name="year" />
+    <br>
+    <input type="submit" value="Thêm" onclick="show()" />
+    <p id="show"></p>
+    <script type="text/javascript">
+
+        function isValidDate(dateString) {
+            // First check for the pattern
+            if (!/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(dateString))
+                return false;
+
+            // Parse the date parts to integers
+            var parts = dateString.split("/");
+            var day = parseInt(parts[1], 10);
+            var month = parseInt(parts[0], 10);
+            var year = parseInt(parts[2], 10);
+
+            // Check the ranges of month and year
+            if (year < 1000 || year > 3000 || month == 0 || month > 12)
+                return false;
+
+            var monthLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+            // Adjust for leap years
+            if (year % 400 == 0 || (year % 100 != 0 && year % 4 == 0))
+                monthLength[1] = 29;
+
+            // Check the range of the day
+            return day > 0 && day <= monthLength[month - 1];
+        }
+        function show() {
+            var timed = document.getElementById("day").value;
+            var timem = document.getElementById("month").value;
+            var timey = document.getElementById("year").value;
+            var date_regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
+
+            if (timed == "" || timem == "" || timey == "")
+                alert("Trường này không được để trống!");
+
+            else if (isValidDate(timed + "/" + timem + "/" + timey)==false) {
+                alert("Thời gian không hợp lệ");
+            }
+            else {
+                var strigdate = timey + "-" + timem + "-" + timed;
+
+                var d = new Date(strigdate);
+                var timestamp = Math.floor(d / 1000);
+                document.getElementById("show").innerHTML = "Timestamp:" + timestamp + " miliseconds";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

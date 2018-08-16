@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="features">
+        <a href="#modalAdd"></a>
+        <a href="#modalEdit"></a>
+        <a href="#modalDelete"></a>
+    </div>
+
+    <div class="top_title">
+        <span>Management Users</span>
+    </div>
+    <div class="tb-users">
+        <table id="tb">
+            <tr id="title">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+
+
+        </table>
+    </div>
+
+    <div id="modalAdd" class="overlay">
+        <a class="cancel" href="#"></a>
+        <div class="popup">
+            <div class="content">
+                <a id="close" class="cancel" href="#">X</a>
+                <div>
+                    Name:
+                    <br>
+                    <input id="name" type="text" name="name">
+                    <br> Username:
+                    <br>
+                    <input id="username" type="text" name="username">
+                    <br> Email:
+                    <br>
+                    <input id="email" type="text" name="email">
+                    <br>
+                    <br>
+
+                    <input type="submit" onclick="adddata()" value="Submit">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalEdit" class="overlay">
+        <a class="cancel" href="#"></a>
+        <div class="popup">
+            <div class="content">
+                <a id="close" class="cancel" href="#">X</a>
+                <div>
+                    Name:
+                    <br>
+                    <input id="namee" type="text" name="name">
+                    <br> Username:
+                    <br>
+                    <input id="usernamee" type="text" name="username">
+                    <br> Email:
+                    <br>
+                    <input id="emaile" type="text" name="email">
+                    <br>
+                    <br>
+
+                    <input type="submit" onclick="editData()" value="Submit">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalDelete" class="overlay">
+        <a class="cancel" href="#"></a>
+        <div class="popup">
+            <div class="content">
+                <p>Bạn có thực sự muốn xoá người dùng này?</p>
+                <br>
+                <div class="yes_no_question">
+                    <button onclick="deleteData()">Có</button>
+                    <button onclick="location.href='#'">Không</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/getAPI.js"></script>
+</body>
+
+</html>

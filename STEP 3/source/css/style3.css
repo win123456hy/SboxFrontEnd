@@ -18,6 +18,11 @@
     font-family: "barontext1";
     src: url(../assets/font/HVDFonts-BrandonText-Regular.otf);
 }
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
 body{
     background: skyblue;
 }
@@ -217,11 +222,7 @@ opacity: 0.5;
     background: url("../assets/img/chevron-arrow-down.svg") no-repeat center;
     background-size: 5px;
 }
-.left>div>ul{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
+
 .left>div>ul>li{
     line-height: 23px;
     display: flex;
@@ -313,8 +314,6 @@ opacity: 0.5;
     font-size: 16px;
 }
 .info>ul{
-    margin: 0px;
-    padding: 0px;
     display: flex;
     flex-direction: row;
 }
@@ -382,10 +381,7 @@ opacity: 0.5;
 #TOTAL{
     left: 627px;
 }
-.product>ul{
-    margin: 0px;
-    padding: 0px;
-}
+
 .product>ul>li{
     display: flex;
     align-items: center;
@@ -462,7 +458,7 @@ opacity: 0.5;
 }
 .bottomdetail{
     display: flex;
-    position: relative;
+    justify-content: space-between
 }
 .bottomdetail>div>ul{
     margin: 0px;
@@ -474,15 +470,7 @@ display: flex;
 align-items: center;
 line-height: 23px;
 }
-.bottomdetail>div>ul>li>p{
-    margin: 0px;
-    position: absolute;
-    right: 140px;
-    font-family: 'barontext1';
-    font-weight: bold;
-    font-size: 8px;
-    color: #C4C7CC;
-}
+
 .bottomdetail>div>span{
     margin-left: 15px;
     color: #9CBFFF;
@@ -496,14 +484,10 @@ line-height: 23px;
     padding-left: 6px;
     padding-right: 5px;
 }
-.bottomdetail>div>ul>li>span{
-    margin-left: 507px;
-    font-family: 'barontext1';
-    font-weight: bold;
-    font-size: 10px;
-}
+
 #grand{
     font-size: 14px !important;
+    color: #4e5865;
 }
 .west>.search{
     display: flex;
@@ -670,4 +654,26 @@ line-height: 23px;
 }
 #specialpro>#deletepro{
     top: 5px !important;
+}
+.rightprice{
+    display: flex;
+}
+.rightprice>div>ul>li>span{
+    font-family: 'barontext1';
+    font-weight: bold;
+    font-size: 8px;
+    color: #6f7984;
+}
+.rightprice>.nameofprice>ul>li>span{
+    float: right;
+    color: #c3c8cc;
+}
+.nameofprice{
+    margin-top: 15px;
+    margin-right: 10px;
+   line-height: 18px;
+}
+.priceofpro{
+    margin-top: 12px;
+    margin-right: 67px;
 }

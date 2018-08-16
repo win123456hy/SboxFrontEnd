@@ -1,0 +1,15 @@
+p,img{
+    visibility: hidden;
+}
+button{
+    width: 100px;
+    height: 50px;
+    text-align: center;
+}
+div{
+    width: 200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -18,9 +18,20 @@
     font-family: "barontext1";
     src: url(../assets/font/HVDFonts-BrandonText-Regular.otf);
 }
+p{
+    margin: 0px;
+    text-shadow: 1px #c8c8c857;
+    color: #4b4f58;
+    font-weight: bolder;
+}
+body{
+    background: black;
+}
 .container{
     width: 1310px;
+    height: 1500px;
     margin: auto;
+    position: relative;
 }
 hr{
     height: 50px;
@@ -30,28 +41,38 @@ hr{
     border-right:1px solid #F6F6F8;
 }
 .top{
+    width: 1310px;
     height: 63px;
     background-color: white;
     display: flex;
     align-items: center;
-    box-shadow: 0px 1px 1px #C8C8C8;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0px 1px 1px #c8c8c857;
 }
 .content{
-    margin-top: 3px;
+    
     display: flex;
+    height: auto;
 }
 .top>form{
     display: flex;
     align-items: center;
+    padding-left: 27px;
 }
 .left{
+    position: absolute;
+    top:63px;
    width: 280px;
-   height: 700px;
+   height: auto;
    background-color: #FAFAFA;
 }
 .right{
+    position: absolute;
+    top:63px;
+    left: 280px;
    width: 1030px;
-   height: 700px;
+   height: auto;
    background-color: #FAFAFA;
 }
 #submit{
@@ -63,7 +84,6 @@ hr{
     background-color: #e4e4e4;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-
 }
 #txtSearch{
     border: 0px;
@@ -71,15 +91,27 @@ hr{
     height: 35px;
     width: 546px;
 }
-.top>span{
-    margin-left: 80px;
+#txtSearch:focus{
+    outline-width: 0;
+}
+.top>.boardash{
+    width: 255px;
+    height: auto;
+}
+.top>.boardash>span{
+    margin: auto;
     font-family:  'NewFont';
     font-size: 15px;
     letter-spacing: 3px;
 }
+.top>div{
+    display: flex;
+    height: auto;
+    align-items: center;
+}
 #bell{
     margin-left: 41px;
-    width: 13px;
+    width: 11px;
 }
 #avatar{
     margin-left: 51px;
@@ -87,17 +119,18 @@ hr{
     height: 34px;
     border-radius: 50%;
 }
-form{
-    margin-left: 99px;
-}
 #add{
     margin-left: 15px;
     width: 21x;
     height: 21px;
 }
-.top>p{
-    font-size: 13px;
-    color: #6a707e;
+.top>div>p{
+    margin-left: 10px;
+    font-size: 12px;
+    font-family: 'NewFont1';
+    font-weight: bolder;
+    color: hsl(222, 9%, 45%);
+    letter-spacing: 0.7px;
 }
 form>input[placeholder]{
    padding-left: 20px;
@@ -108,16 +141,6 @@ form>input[placeholder]{
     opacity: 0.5;
     font-size: 12.5px;
 }
-#setal{
-    font-family: 'NewFont1';
-    font-weight: bolder;
-    margin-left: 12px;
-}
-#essie{
-    font-family: 'NewFont1';
-    font-weight: bolder;
-    margin-left: 15px;
-}
 .admin{
     margin-left: 34px;
     margin-top: 34px;
@@ -127,7 +150,7 @@ form>input[placeholder]{
     align-items: center;
     background: white;
     position: relative;
-    box-shadow: 0px 0px 2px #C8C8C8;
+    box-shadow: 0px 1px 1px #c8c8c857;
 }
 #avataradmin{
     margin-left: 22px;
@@ -163,30 +186,30 @@ form>input[placeholder]{
 .list1{
     margin-left: 34px;
     width: 220px;
-    height: 677px;
+    height: 680px;
     display: flex;
     flex-direction: column;
     background: white;
-    box-shadow: 0px 0px 2px #C8C8C8;
+    box-shadow: 0px 1px 1px #c8c8c857;
 }
 .list1>ul>li{
-    line-height: 18px;
+    margin-bottom: 7px;
+    line-height: 39px;
     display: flex;
     align-items: center;
 }
 .list1>ul>li:hover{
     color: #2290FF;
-    border-left-color: #2290FF;
-    border-left: solid 2px;
+    border-left: solid 2px #2290FF;
+    background: #F5FAFF;
 }
 
 .list1>ul{
+    margin: 0px;
    display: flex;
    flex-direction: column;
-    margin-top: 0px;
-    
     padding: 0px;
-  
+    padding-top: 5px;
 }
 
 .list1>ul>li>img{
@@ -201,7 +224,7 @@ form>input[placeholder]{
     font-size: 12px;
 }
 #logout{
-    margin-top: 300px;
+    margin-top: 285px;
 }
 .flat1{
     width: 930px;
@@ -223,18 +246,15 @@ align-items: center;
     margin-top: 16px;
     width: 930px;
     height: 103px;
-background-color: green;
 display: flex;
 align-items: center;
-border-radius: 10px;
+border-radius: 5px;
 border: solid 1.8px #E2E7EB;
-
 }
 .flat4{
     margin-top: 16px;
     width: 930px;
-    height: 451px;
-background-color: yellow;
+    height: 452px;
 position: relative;
 box-shadow: 0px 0px 10px #F6F6F6;
 }
@@ -260,7 +280,7 @@ box-shadow: 0px 0px 10px #F6F6F6;
     height: 12px;
    
 }
-#btnall{
+.btnall{
     margin-left: 34px;
     border: none;
     box-shadow: 0 0 3px #C8C8C8;
@@ -271,19 +291,22 @@ box-shadow: 0px 0px 10px #F6F6F6;
     color: #6a707e;
     font-size: 12px;
 }
-#btnall:focus{
+.btnall:focus{
     background-color: #2290FF;
+    color: white;
 }
-#btnread:focus{
+.btnread:focus{
     background-color: #2290FF;
+    color: white;
 }
-#btnimportant:focus{
+.btnimportant:focus{
     background-color: #2290FF;
+    color: white;
 }
-#btnread{
+.btnread{
     margin-left: 15px;
 }
-#btnread,#btnimportant{
+.btnread,.btnimportant{
     box-shadow: 0 0 3px #C8C8C8;
     color: #6a707e;
     font-size: 12px;
@@ -309,10 +332,10 @@ box-shadow: 0px 0px 10px #F6F6F6;
     border-radius: 50%;
 }
 #choose>div>p{
+    font-family: "newfont1";
     margin: 6px;
-
     text-align: center;
-    font-size: 11px;
+    font-size: 10px;
     color: white;
 }
 #btnA{
@@ -417,10 +440,11 @@ margin-left: 14px;
 #buttonaddfix{   
     border: none;
     position: fixed;
-    right: 26px;
+    z-index: 2;
+    right: 40px;
     bottom: 33px;
-    width: 53px;
-    height: 53px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background:  url("../assets/img/Group\ 1.png") no-repeat center;
     background-size: cover;
@@ -429,6 +453,7 @@ margin-left: 14px;
 .flat3>div{
     width: 310px;
     height: 103px;
+    border-radius: 5px;
 }
 .flat3>div>img{
     margin-left: 22px;
@@ -474,6 +499,7 @@ background: white;
     font-weight: 600;
     letter-spacing: 1px;
     opacity:1;
+    color: #48515B;
 }
 .flat4>ul{
     padding: 0px;
@@ -488,7 +514,7 @@ background: white;
     height: 64.6px;
     width: 930px;
     background: white;
-    box-shadow: 0px 0px 0.01px #6a707e;
+    box-shadow: 0px 0.5px 0.01px #6a707e;
 }
 .flat4>ul>li>input{
     margin-left: 20px;

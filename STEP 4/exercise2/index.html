@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  
+    <div class="top_title">
+        <span>Management Post</span>
+    </div>
+    <div class="tb-posts">
+        <table id="tb">
+            <tr id="title">
+                <th>ID</th>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Remove</th>
+            </tr>
+
+
+        </table>
+    </div>
+
+    <div id="modalAdd" class="overlay">
+        <a class="cancel" href="#"></a>
+        <div class="popup">
+            <div class="content">
+                <a id="close" class="cancel" href="#">X</a>
+                <div>
+                    Title:
+                    <br>
+                    <input id="titled" type="text" >
+                    <br> Content:
+                    <br>
+                    <input id="body" type="text" >
+                    <br>
+                    <br>
+                    <input type="submit" onclick="adddata()" value="Submit">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div id="modalDelete" class="overlay">
+        <a class="cancel" href="#"></a>
+        <div class="popup">
+            <div class="content">
+                <p>Bạn có thực sự muốn xoá post này?</p>
+                <br>
+                <div class="yes_no_question">
+                    <button onclick="deleteData()">Có</button>
+                    <button onclick="location.href='#'">Không</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <div class="features">
+            <a href="#modalAdd"></a>
+        </div>
+    
+</body>
+
+</html>
