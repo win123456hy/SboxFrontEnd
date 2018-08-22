@@ -1,13 +1,15 @@
 
 # HỌC ANGULARJS
 ## I .AngularJS là gì?
->AngularJS là một framework dành cho các web dynamic. Dùng để tạo các ứng dụng 
->Client-Side theo mô hình MVC. Nó hoạt động dạng Single Page. Hỗ trợ binding 
->và depending  injection.Nó cho phép mở rộng cú pháp HTML để diễn đạt các 
->thành phần ứng dụng một các rõ ràng.
+
+>__AngularJS__ là một framework dành cho các web _dynamic_. Dùng để tạo các 
+>ứng dụng _Client-Side_ theo mô hình _MVC_. Nó hoạt động dạng _Single Page_. 
+>Hỗ trợ _binding_ và _depending  injection_. Nó cho phép mở rộng cú pháp HTML
+> để diễn đạt các thành phần ứng dụng một các rõ ràng.
+> 
 ## II. Hướng dẫn
 ## 1. Cài đặt
->Lên trang chủ [https://angularjs.org/] và tải  về. Sau đó trong file dẫn 
+>Lên trang chủ [https://angularjs.org/] và tải về. Sau đó trong file dẫn 
 >external link script vào trang đó là có thể dùng được.
 
 >Hoặc đơn giản hơn là vào trang chủ và tìm đến đoạn. 
@@ -27,70 +29,76 @@
 
 ### Các directive cơ bản:
 
-* >__ng-app__:  đóng vai trò là main-module. Nếu thẻ nào khai báo nó thì tất cả 
-  >các thẻ bên trong sẽ sử dụng được AngularJS. Có 2 cách khai báo là:
+* >__ng-app__:  đóng vai trò là main-module. Nếu thẻ nào khai báo nó thì tất 
+  >cả các thẻ bên trong sẽ sử dụng được AngularJS. Có 2 cách khai báo là:
 
-- >_ng-app_=”” hay còn gọi là ng-app rỗng
-- >_ng-app_=”tên” hay còn gọi là ng-app có giá trị
+1. >_ng-app_=”” hay còn gọi là ng-app rỗng
+2. >_ng-app_=”tên” hay còn gọi là ng-app có giá trị
 
 
 
 >VD:
->ng-app rỗng
-
+---
+>__ng-app rỗng__
+---
 ```html
-        <body ng-app="">
-        <input ng-model="message"/>
-        {{message}}
-      </body>
-           ng-app có giá trị
-      <body ng-app="myapp">
-      <input ng-model="message"/>
-       {{message}}
-      </body> 
+<body ng-app="">
+    <input ng-model="message" />
+    {{message}}
+</body>
 ```
-> ==Chú ý==: nếu là _ng-app có giá trị_ thì ta phải khai báo nó trong js nếu 
+---
+>__ng-app có giá trị__
+---
+```html
+<body ng-app="myapp">
+    <input ng-model="message" />
+    {{message}}
+</body>
+```
+
+> __Chú ý__: nếu là _ng-app có giá trị_ thì ta phải khai báo nó trong js nếu 
 > không AngularJS sẽ _không hoạt động được_.
 > Với ví dụ trên thì ta thêm vào javascipt như sau:
 
 ```javascript
-        var myApp = angular.module("myapp", []);
+var myApp = angular.module("myapp", []);
 ```
 
-* >ng-controller: thiết lập giá trị, trạng thái ban đầu cho đối tượng hoặc 
-  >thêm các hàm, hành vi vào đối tượng $scope. Tất cả các controller phải khai 
-  >báo trong js. Mỗi controller chỉ được sử dụng trong phạm vi của một ng-app.
+* >__ng-controller__: thiết lập giá trị, trạng thái ban đầu cho đối tượng hoặc 
+  >thêm các hàm, hành vi vào đối tượng __$scope__. Tất cả các controller phải 
+  >khai báo trong js. Mỗi controller chỉ được sử dụng trong phạm vi của một ng-app.
 
 >VD:
 
 ```html
-        <body ng-app="myapp">
-       <div ng-controller="hellocontroller">
+<body ng-app="myapp">
+    <div ng-controller="hellocontroller">
         <p>Xin chào {{hello.title}}</p>
-       </div>
-     </body>
+    </div>
+</body>
 ```
 
 ```javascript
-    var myApp = angular.module("myapp", []);    
-        myApp.controller("hellocontroller", function(){
-        // do anything
-                    });
+ var myApp = angular.module("myapp", []);
+ myApp.controller("hellocontroller", function() {
+     // do anything
+ });
 ```
 
 >Còn khi ng-app rỗng thì khai báo controller như một function:
 
 ```javascript 
-            function hellocontroller($scope){
-                $scope.hello = {
-                    title : 'các bạn',
-                };
-            }
+function hellocontroller($scope) {
+    $scope.hello = {
+        title: 'các bạn',
+    };
+}
 ```
-* >ng-model: dùng để bind giá trị của HTML controls( như input, select, 
-  >textarea) vào dữ liệu của ứng dụng. Nó dùng Two-ways binding để bind , có 
+* >__ng-model__: dùng để bind giá trị của _HTML controls_( như input, select, 
+  >textarea) vào dữ liệu của ứng dụng. Nó dùng _Two-ways binding_ để bind , có 
   >nghĩa là dữ liệu sẽ thay đổi đồng thời khi mà các HTML control thực 
-  >hiệnthao tác. 
+  >hiện thao tác. 
 
 >VD:
 
@@ -109,52 +117,53 @@ app.controller('myCtrl', function($scope) {
 ```
 
 >Với ví dụ trên thì khi ta nhập và một ký tự thì ngay lập tức data sẽ được 
->binding ra và ta sẽ nhìn thấy nó ngay khi ta nhập( giống như AJAX) 
+>binding ra và ta sẽ nhìn thấy nó ngay khi ta nhập( giống như __AJAX__) 
 
-* >ng-init: dùng để khởi tạo giá trị vào scope.
+* >__ng-init__: dùng để khởi tạo giá trị vào _scope_.
 * 
 >VD:
 
 ```html
 <div ng-app="" ng-init="myText='Hello World!'">
 
-<h1>{{myText}}</h1>
+    <h1>{{myText}}</h1>
+</div>
 ```
 
 >Với ví dụ trên ta khởi tạo một biến myText vào scope và t chỉ cần gọi ra khi 
 >cần.
 
-* >ng-if: dùng để xoá thẻ HTML nếu biểu thức trong nó trả về false
-  >Nếu trả về true thì nó sẽ thêm thẻ vào DOM
+* >__ng-if__: dùng để xoá thẻ HTML nếu biểu thức trong nó trả về _false_
+  >Nếu trả về _true_ thì nó sẽ thêm thẻ vào DOM
 
 >VD:
 
 ```html
- <input type="checkbox" ng-model="myVar" ng-init="myVar = true">
+<input type="checkbox" ng-model="myVar" ng-init="myVar = true">
 <div ng-if="myVar">
-<h1>Welcome</h1>
-<p>Welcome to my home.</p>
-<hr>
+    <h1>Welcome</h1>
+    <p>Welcome to my home.</p>
+    <hr>
 </div>
 ```
 
 >Với ví dụ trên thì ta khởi tạo myVar là true. myVar là biểu thức của ng-if
 >Do vậy nó sẽ thêm thẻ ở dưới vào DOM và sẽ hiện lên màn hình. Nếu checkbox 
->unchecked, myVar sẽ trả về false và các thẻ bên dưới ng-if sẽ bị xoá đi trong 
->DOM
+>_unchecked_, myVar sẽ trả về false và các thẻ bên dưới ng-if sẽ bị xoá đi 
+>trong DOM
 
-* >ng-repeat: Đây là chỉ thị lặp, có tác dụng lặp qua một danh sách các phần 
-  >tử, khi chúng ta có một danh sách các phần tử, muốn hiển thị chúng lên 
-  >trang web thì chúng ta lặp qua danh sách đó và hiển thị các phần tử theo 
-  >một khuôn mẫu giống nhau. 
+* >__ng-repeat__: Đây là chỉ thị lặp, có tác dụng lặp qua một danh sách các
+  > phần tử, khi chúng ta có một danh sách các phần tử, muốn hiển thị chúng
+  >  lên trang web thì chúng ta lặp qua danh sách đó và hiển thị các phần tử 
+  >  theo một khuôn mẫu giống nhau. 
 
 >VD: 
 
 ```html
 <body ng-app="myApp" ng-controller="myCtrl">
 
-<h1 ng-repeat="x in records">{{x}}</h1>
-
+    <h1 ng-repeat="x in records">{{x}}</h1>
+</body>
 ```
 ```javascript
 var app = angular.module("myApp", []);
@@ -169,32 +178,33 @@ app.controller("myCtrl", function($scope) {
 ```
 
 
-* >ng-show: dùng để show các thẻ HTML khi biểu thức là true. Nếu là false thì 
-  >các thẻ sẽ bị ẩn đi chứ không xoá  như ng-if.
+* >__ng-show__: dùng để show các thẻ HTML khi biểu thức là _true_. Nếu là 
+  >_false_ thì các thẻ sẽ bị ẩn đi chứ không xoá  như ng-if.
 
 >VD:
 
 ```html
 Show HTML: <input type="checkbox" ng-model="myVar">
 <div ng-show="myVar">
-<h1>Welcome</h1>
-<p>Welcome to my home.</p>
+    <h1>Welcome</h1>
+    <p>Welcome to my home.</p>
 </div>
 ```
 
-* >ng-submit: dùng để chạy một hàm khi form được submit
+* >__ng-submit__: dùng để chạy một hàm khi form được submit
 
 >VD:
 
 ```html
 <body ng-app="myApp" ng-controller="myCtrl">
 
-<form ng-submit="myFunc()">
-    <input type="text">
-    <input type="submit">
-</form>
+    <form ng-submit="myFunc()">
+        <input type="text">
+        <input type="submit">
+    </form>
 
-<p>{{myTxt}}</p>
+    <p>{{myTxt}}</p>
+</body>
 ```
 ```javascript
 var app = angular.module("myApp", []);
