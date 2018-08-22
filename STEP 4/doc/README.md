@@ -10,8 +10,12 @@
 >Lên trang chủ [https://angularjs.org/] và tải  về. Sau đó trong file dẫn 
 >external link script vào trang đó là có thể dùng được.
 
->Hoặc đơn giản hơn là vào trang chủ và tìm đến đoạn 
-```<script src="https://ajax.googleapis.com/ajax/libs/angularjs/.....<số phiên bản>/angular.min.js"></script> ```
+>Hoặc đơn giản hơn là vào trang chủ và tìm đến đoạn. 
+
+```html
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/.....<số phiên bản>/angular.min.js"></script>
+```
+
 >và chèn tương tự như trên vào trang.
 
 ## 2. Directives trong AngularJS
@@ -23,16 +27,18 @@
 
 ### Các directive cơ bản:
 
-⋅⋅*ng-app:  đóng vai trò là main-module. Nếu thẻ nào khai báo nó thì tất cả các thẻ bên trong sẽ sử dụng được AngularJS. Có 2 cách khai báo là:
+* ng-app:  đóng vai trò là main-module. Nếu thẻ nào khai báo nó thì tất cả các thẻ bên trong sẽ sử dụng được AngularJS. Có 2 cách khai báo là:
 
---- ng-app=”” hay còn gọi là ng-app rỗng
---- ng-app=”tên” hay còn gọi là ng-app có giá trị
+** ng-app=”” hay còn gọi là ng-app rỗng
+** ng-app=”tên” hay còn gọi là ng-app có giá trị
 
 
 
-VD:
-    ng-app rỗng
-       <body ng-app="">
+>VD:
+>ng-app rỗng
+
+```html
+        <body ng-app="">
         <input ng-model="message"/>
         {{message}}
       </body>
@@ -40,30 +46,44 @@ VD:
       <body ng-app="myapp">
       <input ng-model="message"/>
        {{message}}
-      </body>
-Chú ý: nếu là ng-app có giá trị thì ta phải khai báo nó trong js nếu không AngularJS sẽ không hoạt động được.
- Với ví dụ trên thì ta thêm vào javascipt như sau:
+      </body> 
+```
+>Chú ý: nếu là ng-app có giá trị thì ta phải khai báo nó trong js nếu không
+>AngularJS sẽ không hoạt động được.
+> Với ví dụ trên thì ta thêm vào javascipt như sau:
+
+```javascript
         var myApp = angular.module("myapp", []);
-•   ng-controller: thiết lập giá trị, trạng thái ban đầu cho đối tượng hoặc thêm các hàm, hành vi vào đối tượng $scope. Tất cả các controller phải khai báo trong js. Mỗi controller chỉ được sử dụng trong phạm vi của một ng-app.
-VD:
+```
+
+* ng-controller: thiết lập giá trị, trạng thái ban đầu cho đối tượng hoặc thêm các hàm, hành vi vào đối tượng $scope. Tất cả các controller phải khai báo trong js. Mỗi controller chỉ được sử dụng trong phạm vi của một ng-app.
+>VD:
+
+```html
         <body ng-app="myapp">
        <div ng-controller="hellocontroller">
         <p>Xin chào {{hello.title}}</p>
        </div>
      </body>
+```
 
+```javascript
     var myApp = angular.module("myapp", []);    
         myApp.controller("hellocontroller", function(){
         // do anything
                     });
+```
 
-Còn khi ng-app rỗng thì khai báo controller như một function:
+>Còn khi ng-app rỗng thì khai báo controller như một function:
+
+```javascript 
             function hellocontroller($scope){
                 $scope.hello = {
                     title : 'các bạn',
                 };
             }
-•   ng-model: dùng để bind giá trị của HTML controls( như input, select, textarea) vào dữ liệu của ứng dụng. Nó dùng Two-ways binding để bind , có nghĩa là dữ liệu sẽ thay đổi đồng thời khi mà các HTML control thực hiện thao tác. 
+```
+*   ng-model: dùng để bind giá trị của HTML controls( như input, select, textarea) vào dữ liệu của ứng dụng. Nó dùng Two-ways binding để bind , có nghĩa là dữ liệu sẽ thay đổi đồng thời khi mà các HTML control thực hiện thao tác. 
 VD:
 <div ng-app="myApp" ng-controller="myCtrl">
     Name: <input ng-model="name">
