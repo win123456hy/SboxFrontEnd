@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>none</title>
+</head>
+
+<body>
+
+    <script>
+        var a = 5, b = 10;
+        if (a < b) {
+            var temp = a;
+            a = b;
+            b = temp;
+        }
+        console.log(a);
+        console.log(b);
+        console.log(temp);
+
+        var Add = () => {
+            console.log("ahihi");
+        }
+        Add();
+
+        var functionname = (a, b, ...other) => {
+
+            return other;
+        }
+        var array = functionname("Dat", "Bang", "Sự", "dfsdfds", "d");
+        console.log(array[2]);
+
+        /* let date = [10, 3, 2018];
+        let [, , y] = date;
+        document.write("Hôm nay là ngày giỗ tổ Hùng Vương" + y); */
+
+        let date = { day: 10, month: 3, year: 2018 }
+        let { day: d, month: m, year: y } = date;
+        document.write("Hôm nay là ngày giỗ tổ Hùng Vương " + d + "-" + m + "-" + y);
+
+
+        var df = (myname = "Trần Quốc Đạt") => {
+            console.log(myname);
+        }
+        df();
+        df("Nguyễn Kim Bảng");
+
+        let first = "Trần Quốc";
+        let last = "Đạt";
+        let myname = `Tên tôi là ${first} ${last}.`;
+        console.log(myname);
+
+        var content = 'Toi ten la Tran Van My,'
+            + 'La mot developer cua cong ty Framgia'
+            + 'Ad: 13F Keangnam Landmark 72 Tower, Plot E6, Pham Hung Road, Nam Tu Liem District'
+            + 'So thich la: code, xem anime, va ngu';
+        console.log(content);
+
+        /* function createSinger(name, age, address, salary) {
+            return {
+                name,
+                age,
+                address,
+                salary,
+            }
+        }
+        var ob = createSinger("dat", 22, "Hưng Yên", "30tr");
+        console.log(ob.name); */
+
+        function createSinger(name, age, address, salary) {
+            return {
+                ['salaryOf' + name]: salary,
+            }
+        }
+
+        var luog = createSinger("dat", 22, "Hưng Yên", 30000000);
+        console.log(luog);
+
+         class Conchim {
+            constructor(mau,canh) {
+                this.mau=mau;
+                this.canh=canh;
+            }
+            getmau() {
+                return this.mau;
+            }
+            setmau(mau1) {
+                this.mau=mau1;
+            }
+            getcanh() {
+                return this.canh;
+            }
+            setcanh(canh1) {
+                this.canh=canh1;
+            }
+        }
+
+        var c=new Conchim();
+        c.setmau("Red");
+        c.setcanh("Big");
+       console.log( c);
+
+       const pi=3.14;
+       console.log(pi);
+
+        var http = require('http');
+
+        http.createServer(function (req, res) {
+            res.writeHead(200, {'Content-Type': 'text/plain'});
+            res.end('Hello World!');
+        }).listen(8080);
+
+    </script>
+</body>
+
+</html>

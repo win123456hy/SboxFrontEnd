@@ -1,0 +1,356 @@
+@font-face {
+    font-family: "NewFont";
+    src: url(../assets/font/Gilroy-ExtraBold.otf);
+}
+@font-face {
+    font-family: "NewFont1";
+    src: url(../assets/font/Gilroy-Light.otf);
+}
+@font-face {
+    font-family: "NumberF";
+    src: url(../assets/font/MarketFresh.ttf);
+}
+@font-face {
+    font-family: "barontext";
+    src: url(../assets/font/HVDFonts-BrandonText-Bold.otf);
+}
+@font-face {
+    font-family: "barontext1";
+    src: url(../assets/font/HVDFonts-BrandonText-Regular.otf);
+}
+body{
+    margin: 0px;
+    position: relative;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+.container{
+    margin: auto;
+    width: 1000px;
+    height: 1200px;
+    background: chartreuse;
+    display: flex;
+}
+.left{
+    width: 400px;
+    height: 1200px;
+    background: #DEB71C;
+
+}
+.right{
+    width: 600px;
+    height: 1200px;
+    background: #444444;
+}
+.avatar>img{
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    border: solid 3px #DEB71C;
+    border-radius: 100%;
+}
+.avatar{
+    width: auto;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+.list>ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.list>ul>li{
+    height: auto;
+}
+.list>ul>li:hover .detail>ul>li{
+    visibility: visible;
+    animation-name: abc;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.list2>ul>li:hover .detail>ul>li{
+    visibility: visible;
+    animation-name: abc;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.list>ul>li:hover .detail>ul>li>div>span{
+    margin-left: 10px;
+}
+.list2>ul>li:hover .detail>ul>li>div>span{
+    margin-left: 10px;
+    color: #DEB71C;
+}
+@keyframes abc{
+    from{
+        margin-left: 0px;
+    }
+    to{
+        margin-left: 43px;
+    }
+}
+.list>ul>li>.detail>ul>li{
+    visibility: hidden;
+}
+.list2>ul>li>.detail>ul>li{
+    visibility: hidden;
+}
+.list>ul>li>.title:hover{
+    animation-name: lihover;
+    animation-duration: 1s;
+}
+.list2>ul>li>.title:hover{
+    animation-name: lihover2;
+    animation-duration: 1s;
+}
+.list2>ul>li>.title:hover span{
+    animation-name: spanhover;
+    animation-duration: 1s;
+}
+@keyframes spanhover{
+    from{
+    }
+    to{
+        color: #444444;
+    }
+}
+@keyframes lihover2{
+    from{
+    }
+    to{
+        background: white;
+        color: #444444;
+    }
+}
+@keyframes lihover{
+    from{
+    }
+    to{
+        background: white;
+    }
+}
+.list>ul>li>.title{
+    display: flex;
+    align-items: center;
+    border-left: solid 10px #444444;
+    height:60px;
+    margin-bottom: 20px;
+}
+.list>ul>li>.title>div{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.list>ul>li>.title>div>img{
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    animation-name: imageanima;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes imageanima{
+    0%{width: 30px;
+        height: 30px;}
+    100%{
+        margin-left: 5px;
+        width: 40px;
+        height: 40px;}
+}
+.list>ul>li>.title>span{
+    margin-left: 20px;
+    font-family: 'Anton', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    color: #444444;
+}
+.list2>ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.list2>ul>li{
+    height: auto;
+}
+.list2>ul>li>.title{
+    display: flex;
+    align-items: center;
+    border-left: solid 10px #DEB71C;
+    height:60px;
+}
+.list2>ul>li>.title>div{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    background: #DEB71C;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+.list2>ul>li>.title>div>img{
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    animation-name: imageanima;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.list2>ul>li>.title>span{
+    margin-left: 20px;
+    font-family: 'Anton', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    color: white;
+}
+.name{
+    width: auto;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+.name>span{
+    padding-left: 20px;
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+    line-height: 100px;
+    letter-spacing: 2px;
+    color: white;
+    border-left: solid 10px #DEB71C;
+}
+.detail>ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.detail>ul>li{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.detail>ul>li>img{
+    width: 20px;
+    height: 20px;
+}
+.detail>ul>li>div>span{
+    margin-left: 20px;
+    font-family: 'barontext', sans-serif;
+    font-size: 11px;
+    font-weight: bolder;
+    font-style: italic;
+}
+#progress{
+    position: absolute;
+    left:80px;
+    width: 200px;
+    height: 20px;
+    background: silver;
+}
+#progress>p{
+    margin: 0px;
+    height: 20px;
+    animation-name: progresss;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes progresss{
+    0%{
+        width: 0px;
+        background: black;
+    }
+    40%{
+        width: 50px;
+        background: black;
+    }
+    80%{
+        width: 100px;
+        background: black;
+    }
+    100%{
+        width: 125px;
+        background: black;
+    }
+}
+#kinangmem{
+    position: relative;
+}
+.list2>ul>li>.detail>ul>li>p{
+    margin: 0px;
+    margin-left: 100px;
+    color: #DEB71C;
+}
+.list2>ul>li>.detail>ul>li>div>p{
+    margin: 0px;
+    margin-left: 100px;
+    color: #DEB71C;
+}
+#vitri{
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+}
+#muctieu{
+    font-family: 'Anton', sans-serif;
+    font-size: 11px;
+}
+#ulhobbies{
+    padding-left: 150px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+#ulhobbies>li>img{
+    width: 40px;
+    height: 40px;
+}
+a[href="#avatar"]>img{
+    width: 70px;
+    height: 70px;
+}
+a[href="#avatar"]{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
