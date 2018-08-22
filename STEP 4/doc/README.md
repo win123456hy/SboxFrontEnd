@@ -83,48 +83,73 @@
                 };
             }
 ```
-*   ng-model: dùng để bind giá trị của HTML controls( như input, select, textarea) vào dữ liệu của ứng dụng. Nó dùng Two-ways binding để bind , có nghĩa là dữ liệu sẽ thay đổi đồng thời khi mà các HTML control thực hiện thao tác. 
-VD:
+* ng-model: dùng để bind giá trị của HTML controls( như input, select, textarea) vào dữ liệu của ứng dụng. Nó dùng Two-ways binding để bind , có nghĩa là dữ liệu sẽ thay đổi đồng thời khi mà các HTML control thực hiện thao tác. 
+>VD:
+
+```html
 <div ng-app="myApp" ng-controller="myCtrl">
     Name: <input ng-model="name">
 </div>
 
 <script>
+```
+```javascript
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope) {
     $scope.name = "John Doe";
 });
+```
+
+```html
 </script>
+```
 
-    Với ví dụ trên thì khi ta nhập và một ký tự thì ngay lập tức data sẽ được binding ra và ta sẽ nhìn thấy nó ngay khi ta nhập( giống như AJAX) 
+>Với ví dụ trên thì khi ta nhập và một ký tự thì ngay lập tức data sẽ được 
+>binding ra và ta sẽ nhìn thấy nó ngay khi ta nhập( giống như AJAX) 
 
-•   ng-init: dùng để khởi tạo giá trị vào scope.
-VD:
+*   ng-init: dùng để khởi tạo giá trị vào scope.
+>VD:
+
+```html
 <div ng-app="" ng-init="myText='Hello World!'">
 
 <h1>{{myText}}</h1>
+```
 
-    Với ví dụ trên ta khởi tạo một biến myText vào scope và t chỉ cần gọi ra khi cần.
-•   ng-if: dùng để xoá thẻ HTML nếu biểu thức trong nó trả về false
+>Với ví dụ trên ta khởi tạo một biến myText vào scope và t chỉ cần gọi ra khi 
+>cần.
+*  ng-if: dùng để xoá thẻ HTML nếu biểu thức trong nó trả về false
 Nếu trả về true thì nó sẽ thêm thẻ vào DOM
-VD:
-Keep HTML: <input type="checkbox" ng-model="myVar" ng-init="myVar = true">
+
+>VD:
+>Keep HTML:
+
+```html
+ <input type="checkbox" ng-model="myVar" ng-init="myVar = true">
 <div ng-if="myVar">
 <h1>Welcome</h1>
 <p>Welcome to my home.</p>
 <hr>
 </div>
+```
 
-Với ví dụ trên thì ta khởi tạo myVar là true. myVar là biểu thức của ng-if
-Do vậy nó sẽ thêm thẻ ở dưới vào DOM và sẽ hiện lên màn hình. Nếu checkbox unchecked, myVar sẽ trả về false và các thẻ bên dưới ng-if sẽ bị xoá đi trong DOM
+>Với ví dụ trên thì ta khởi tạo myVar là true. myVar là biểu thức của ng-if
+>Do vậy nó sẽ thêm thẻ ở dưới vào DOM và sẽ hiện lên màn hình. Nếu checkbox 
+>unchecked, myVar sẽ trả về false và các thẻ bên dưới ng-if sẽ bị xoá đi trong 
+>DOM
 
-•   ng-repeat: Đây là chỉ thị lặp, có tác dụng lặp qua một danh sách các phần tử, khi chúng ta có một danh sách các phần tử, muốn hiển thị chúng lên trang web thì chúng ta lặp qua danh sách đó và hiển thị các phần tử theo một khuôn mẫu giống nhau. 
-VD: 
+* ng-repeat: Đây là chỉ thị lặp, có tác dụng lặp qua một danh sách các phần tử, khi chúng ta có một danh sách các phần tử, muốn hiển thị chúng lên trang web thì chúng ta lặp qua danh sách đó và hiển thị các phần tử theo một khuôn mẫu giống nhau. 
+
+>VD: 
+
+```html
 <body ng-app="myApp" ng-controller="myCtrl">
 
 <h1 ng-repeat="x in records">{{x}}</h1>
 
 <script>
+```
+```javascript
 var app = angular.module("myApp", []);
 app.controller("myCtrl", function($scope) {
     $scope.records = [
@@ -134,22 +159,29 @@ app.controller("myCtrl", function($scope) {
         "Ernst Handel",
     ]
 });
+```
+```html
 </script>
 
 </body>
+```
 
-•   ng-show: dùng để show các thẻ HTML khi biểu thức là true. Nếu là false thì các thẻ sẽ bị ẩn đi chứ không xoá  như ng-if.
-VD:
+* ng-show: dùng để show các thẻ HTML khi biểu thức là true. Nếu là false thì các thẻ sẽ bị ẩn đi chứ không xoá  như ng-if.
+>VD:
+
+```html
 Show HTML: <input type="checkbox" ng-model="myVar">
 <div ng-show="myVar">
 <h1>Welcome</h1>
 <p>Welcome to my home.</p>
 </div>
+```
 
+* ng-submit: dùng để chạy một hàm khi form được submit
 
-•   ng-submit: dùng để chạy một hàm khi form được submit
+>VD:
 
-VD:
+```html
 <body ng-app="myApp" ng-controller="myCtrl">
 
 <form ng-submit="myFunc()">
@@ -160,6 +192,8 @@ VD:
 <p>{{myTxt}}</p>
 
 <script>
+```
+```javascript
 var app = angular.module("myApp", []);
 app.controller("myCtrl", function($scope) {
     $scope.myTxt = "You have not yet clicked submit";
@@ -167,7 +201,9 @@ app.controller("myCtrl", function($scope) {
         $scope.myTxt = "You clicked submit!";
     }
 });
+```
+```html
 </script>
 </body>
-•   Tạo 1 directive tuỳ chỉnh:
+```
 
