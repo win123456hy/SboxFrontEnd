@@ -15,7 +15,7 @@
 >Hoặc đơn giản hơn là vào trang chủ và tìm đến đoạn. 
 
 ```html
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/.....<số phiên bản>/angular.min.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/.....<số phiên bản>/angular.min.js"></script>
 ```
 
 >và chèn tương tự như trên vào trang.
@@ -66,18 +66,18 @@ Nếu là __ng-app__ có giá trị_ thì ta phải khai báo nó trong js nếu
 
 
 ```html
-            <body ng-app="myapp">
-                <div ng-controller="hellocontroller">
-                    <p>Xin chào {{hello.title}}</p>
-                </div>
-            </body>
+                <body ng-app="myapp">
+                    <div ng-controller="hellocontroller">
+                        <p>Xin chào {{hello.title}}</p>
+                    </div>
+                </body>
 ```
 
 ```javascript
-            var myApp = angular.module("myapp", []);
-            myApp.controller("hellocontroller", function() {
-                // do anything
-            });
+                var myApp = angular.module("myapp", []);
+                myApp.controller("hellocontroller", function() {
+                    // do anything
+                });
 ```
 
 > Còn khi ng-app rỗng thì khai báo controller như một function:
