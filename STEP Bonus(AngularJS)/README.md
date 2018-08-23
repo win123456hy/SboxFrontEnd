@@ -51,7 +51,7 @@
                 </body>
 ```
 
->       __Chú ý__: Nếu là __ng-app__ có giá trị_ thì ta phải khai báo nó trong js nếu không AngularJS sẽ _không hoạt động được_. Với ví dụ trên thì ta thêm vào javascipt như sau:
+>       Chú ý: Nếu là __ng-app__ có giá trị_ thì ta phải khai báo nó trong js nếu không AngularJS sẽ _không hoạt động được_. Với ví dụ trên thì ta thêm vào javascipt như sau:
 
 
 
