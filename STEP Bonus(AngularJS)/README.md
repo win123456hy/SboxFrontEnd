@@ -35,19 +35,19 @@
 
                        
 ```html
-                                    <body ng-app="">
-                                        <input ng-model="message" />
-                                        {{message}}
-                                    </body>
+                <body ng-app="">
+                    <input ng-model="message" />
+                    {{message}}
+                </body>
 ```
 
 > Cách 2: _ng-app_=”tên” hay còn gọi là ng-app có giá trị
 
 ```html
-                                    <body ng-app="myapp">
-                                        <input ng-model="message" />
-                                        {{message}}
-                                    </body>
+                <body ng-app="myapp">
+                    <input ng-model="message" />
+                    {{message}}
+                </body>
 ```
 
 __Chú ý__:
@@ -56,7 +56,7 @@ Nếu là __ng-app__ có giá trị_ thì ta phải khai báo nó trong js nếu
 
 
 ```javascript
-             var myApp = angular.module("myapp", []);
+                var myApp = angular.module("myapp", []);
 ```
 
 * __ng-controller__: thiết lập giá trị, trạng thái ban đầu cho đối tượng hoặc 
