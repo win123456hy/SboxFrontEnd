@@ -204,4 +204,4 @@ Nếu là __ng-app__ có giá trị_ thì ta phải khai báo nó trong js nếu
 ```
 
 ## Link bài làm: 
-    [https://jsfiddle.net/win123456hy/4ucpzL6m/519/]
+[https://jsfiddle.net/win123456hy/4ucpzL6m/519/]
