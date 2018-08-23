@@ -111,8 +111,8 @@
                 });
 ```
 
->       Với ví dụ trên thì khi ta nhập và một ký tự thì ngay lập tức data sẽ được binding ra và ta sẽ nhìn thấy 
->       nó ngay khi ta nhập( giống như AJAX). 
+>       Với ví dụ trên thì khi ta nhập và một ký tự thì ngay lập tức data sẽ được binding ra và ta sẽ nhìn 
+>       thấy nó ngay khi ta nhập( giống như AJAX). 
 
 * __ng-init__: dùng để khởi tạo giá trị vào _scope_.
 
@@ -141,8 +141,8 @@
 ```
 
 >       Với ví dụ trên thì ta khởi tạo myVar là true. myVar là biểu thức của ng-if. Do vậy nó sẽ thêm thẻ ở 
->       dưới vào DOM và sẽ hiện lên màn hình. Nếu checkbox unchecked, myVar sẽ trả về false và các thẻ bên dưới 
->       ng-if sẽ bị xoá đi trong DOM.
+>       dưới vào DOM và sẽ hiện lên màn hình. Nếu checkbox unchecked, myVar sẽ trả về false và các thẻ bên 
+>       dưới ng-if sẽ bị xoá đi trong DOM.
 
 * __ng-repeat__: Đây là chỉ thị lặp, có tác dụng lặp qua một danh sách các
    phần tử, khi chúng ta có một danh sách các phần tử, muốn hiển thị chúng
