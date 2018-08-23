@@ -15,7 +15,8 @@
 >Hoặc đơn giản hơn là vào trang chủ và tìm đến đoạn. 
 
 ```html
-                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/.....<số phiên bản>/angular.min.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/.....<số phiên bản>/angular.min.js">
+                </script>
 ```
 
 >và chèn tương tự như trên vào trang.
@@ -31,7 +32,7 @@
 
 *  __ng-app__:  đóng vai trò là main-module. Nếu thẻ nào khai báo nó thì tất cả các thẻ bên trong sẽ sử dụng được AngularJS. Có 2 cách khai báo là:
 
-> Cách 1: _ng-app_=”” hay còn gọi là ng-app rỗng
+> Cách 1: _ng-app_=”” hay còn gọi là ng-app rỗng.
 
                        
 ```html
@@ -41,7 +42,7 @@
                 </body>
 ```
 
-> Cách 2: _ng-app_=”tên” hay còn gọi là ng-app có giá trị
+> Cách 2: _ng-app_=”tên” hay còn gọi là ng-app có giá trị.
 
 ```html
                 <body ng-app="myapp">
@@ -110,7 +111,7 @@ Nếu là __ng-app__ có giá trị_ thì ta phải khai báo nó trong js nếu
                 });
 ```
 
-> Với ví dụ trên thì khi ta nhập và một ký tự thì ngay lập tức data sẽ được binding ra và ta sẽ nhìn thấy nó ngay khi ta nhập( giống như __AJAX__) 
+> Với ví dụ trên thì khi ta nhập và một ký tự thì ngay lập tức data sẽ được binding ra và ta sẽ nhìn thấy nó ngay khi ta nhập( giống như __AJAX__). 
 
 * __ng-init__: dùng để khởi tạo giá trị vào _scope_.
 
@@ -126,7 +127,7 @@ Nếu là __ng-app__ có giá trị_ thì ta phải khai báo nó trong js nếu
 > Với ví dụ trên ta khởi tạo một biến myText vào scope và t chỉ cần gọi ra khi cần.
 
 * __ng-if__: dùng để xoá thẻ HTML nếu biểu thức trong nó trả về _false_
-  Nếu trả về _true_ thì nó sẽ thêm thẻ vào DOM
+  Nếu trả về _true_ thì nó sẽ thêm thẻ vào DOM.
 
 
 ```html
@@ -178,7 +179,7 @@ Nếu là __ng-app__ có giá trị_ thì ta phải khai báo nó trong js nếu
                 </div>
 ```
 
-* __ng-submit__: dùng để chạy một hàm khi form được submit
+* __ng-submit__: dùng để chạy một hàm khi form được submit.
 
 
 ```html
