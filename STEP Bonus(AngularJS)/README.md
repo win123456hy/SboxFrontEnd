@@ -31,7 +31,7 @@
 
 *  __ng-app__:  đóng vai trò là main-module. Nếu thẻ nào khai báo nó thì tất cả các thẻ bên trong sẽ sử dụng được AngularJS. Có 2 cách khai báo là:
 
-        Cách 1: _ng-app_=”” hay còn gọi là ng-app rỗng
+> Cách 1: _ng-app_=”” hay còn gọi là ng-app rỗng
 
                        
 ```html
@@ -40,7 +40,8 @@
                                         {{message}}
                                     </body>
 ```
-         Cách 2: _ng-app_=”tên” hay còn gọi là ng-app có giá trị
+
+> Cách 2: _ng-app_=”tên” hay còn gọi là ng-app có giá trị
 
 ```html
                                     <body ng-app="myapp">
@@ -49,10 +50,10 @@
                                     </body>
 ```
 
+__Chú ý__:
+Nếu là __ng-app__ có giá trị_ thì ta phải khai báo nó trong js nếu không AngularJS sẽ _không hoạt động được_. Với ví dụ trên thì ta thêm vào javascipt như sau:
 
-<div style="margin-left:100px"><span style="color:red;font-weight:bold">Chú ý:</span><pre style="color:black">
-Nếu là <strong>ng-app</strong> có giá trị_ thì ta phải khai báo nó trong js nếu không AngularJS sẽ _không hoạt động được_. Với ví dụ trên thì ta thêm vào javascipt như sau:</pre>
-</div>
+
 
 ```javascript
              var myApp = angular.module("myapp", []);
@@ -79,7 +80,7 @@ Nếu là <strong>ng-app</strong> có giá trị_ thì ta phải khai báo nó t
             });
 ```
 
-        Còn khi ng-app rỗng thì khai báo controller như một function:
+> Còn khi ng-app rỗng thì khai báo controller như một function:
 
 ```javascript 
                 function hellocontroller($scope) {
@@ -109,7 +110,7 @@ Nếu là <strong>ng-app</strong> có giá trị_ thì ta phải khai báo nó t
                 });
 ```
 
-        Với ví dụ trên thì khi ta nhập và một ký tự thì ngay lập tức data sẽ được binding ra và ta sẽ nhìn thấy nó ngay khi ta nhập( giống như __AJAX__) 
+> Với ví dụ trên thì khi ta nhập và một ký tự thì ngay lập tức data sẽ được binding ra và ta sẽ nhìn thấy nó ngay khi ta nhập( giống như __AJAX__) 
 
 * __ng-init__: dùng để khởi tạo giá trị vào _scope_.
 
@@ -122,7 +123,7 @@ Nếu là <strong>ng-app</strong> có giá trị_ thì ta phải khai báo nó t
                 </div>
 ```
 
-        Với ví dụ trên ta khởi tạo một biến myText vào scope và t chỉ cần gọi ra khi cần.
+> Với ví dụ trên ta khởi tạo một biến myText vào scope và t chỉ cần gọi ra khi cần.
 
 * __ng-if__: dùng để xoá thẻ HTML nếu biểu thức trong nó trả về _false_
   Nếu trả về _true_ thì nó sẽ thêm thẻ vào DOM
@@ -137,7 +138,7 @@ Nếu là <strong>ng-app</strong> có giá trị_ thì ta phải khai báo nó t
                 </div>
 ```
 
-        Với ví dụ trên thì ta khởi tạo myVar là true. myVar là biểu thức của ng-if. Do vậy nó sẽ thêm thẻ ở dưới vào DOM và sẽ hiện lên màn hình. Nếu checkbox _unchecked_, myVar sẽ trả về false và các thẻ bên dưới ng-if sẽ bị xoá đi trong DOM.
+> Với ví dụ trên thì ta khởi tạo myVar là true. myVar là biểu thức của ng-if. Do vậy nó sẽ thêm thẻ ở dưới vào DOM và sẽ hiện lên màn hình. Nếu checkbox _unchecked_, myVar sẽ trả về false và các thẻ bên dưới ng-if sẽ bị xoá đi trong DOM.
 
 * __ng-repeat__: Đây là chỉ thị lặp, có tác dụng lặp qua một danh sách các
    phần tử, khi chúng ta có một danh sách các phần tử, muốn hiển thị chúng
