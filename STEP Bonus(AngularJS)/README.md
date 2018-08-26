@@ -60,7 +60,7 @@
  https://nodejs.org/en/ , tài về máy và cài đặt.
 > Khi cài đặt xong, ta cài yo và các trình quản lý khác bằng CMD.
 
-`<span style="color:white;background:black;">npm install -g grunt-cli bower yo generator-karma generator-angular</span>`
+> __npm install -g grunt-cli bower yo generator-karma generator-angular__
 
 
 
@@ -71,11 +71,11 @@
 
 > Link:https://git-scm.com/
 
-`<span style="color:white;background:black;">bower install angular</span>`
+> __bower install angular__
 
 > __Chú ý__: Nếu chương trình báo lỗi thiếu Bower thì ta phải cài Bower bằng CMD như sau:
 
-`<span style="color:white;background:black;">npm install bower</span>`
+> __npm install bower__
 
 
 > Tiếp đến tạo một thư mục để chưa project bằng cách bình thường hoặc CMD. Sau khi tạo xong, mở thư mục đó lên và bấm vào thanh URL và gõ cmd và bấm Enter như hình để vào cmd:
@@ -86,7 +86,7 @@
 
 > Sau khi vào CMD,ta tiến hành cài đặt Yeoman bằng lệnh:
 
-`<span style="color:white;background:black;">yo angular</span>`
+> __yo angular__
 
 > Màn hình sau đó sẽ như bên dưới, bấm n sau đó Enter.
 
@@ -98,7 +98,7 @@
 
 > Sau khi xong Ruby, cài compass bằng lệnh CMD:
 
-`<span style="color:white;background:black;">gem install compass</span>`
+> __gem install compass__
 
   ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture9.PNG)
 
@@ -109,10 +109,10 @@
  ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture10.PNG)
 
  > Đợi một chút cho chương trình cài đặt xong và hưởng thành quả.
-
+ 
  > Nếu muốn chạy thử trên trình duyệt web thì ta dùng lênh như sau:
 
-`<span style="color:white;background:black;">grunt serve</span>`
+> __grunt serve__
 
 > Giờ ta đã có một project MVC để học AngularJS với Yeoman. Hình minh hoạ:
 
