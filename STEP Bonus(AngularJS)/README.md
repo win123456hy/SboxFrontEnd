@@ -49,13 +49,14 @@
 
  ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture5.PNG)
 
- > Vậy là ta đã hoàn thành việc tạo một môi trường code online học Angular.
+ > Vậy là ta đã hoàn thành việc tạo một môi trường code online học Angular. Việc còn lại là các bạn chỉ cần viết code thôi.
 
+> Link demo:
  ### 2.2 Tạo với Yeoman AngularJS
 
  > Với __Yeoman AngularJS__ thì việc tạo project sẽ được tự động hoá và được viết theo mô hình MVC. 
 
- > Trước tiên, để cài được Yeoman thì máy chúng ta phải cài NodeJS. Để cài NodeJS ta vào trang
+ > Trước tiên, để cài được Yeoman thì máy chúng ta phải cài __NodeJS__. Để cài NodeJS ta vào trang
  https://nodejs.org/en/ , tài về máy và cài đặt.
 > Khi cài đặt xong, ta cài yo và các trình quản lý khác bằng CMD.
 
@@ -65,7 +66,9 @@
 
 
 > Sau đó cài AngularJS với Bower bằng CMD như sau:
+
 > __Chú ý__: Phải cài __Git__ trước khi tiến hành cài AngularJS.
+
 > Link:https://git-scm.com/
 
 <span style="color:white;background:black;">bower install angular</span>
@@ -90,7 +93,9 @@
  ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture8.PNG)
 
  > Tiếp theo, nếu bạn dùng Sass trong project thì bấm y. Nếu không bấm n rồi Enter.
+
  > Chú ý: Cần phải cài Ruby và Compass. Để cài Ruby vào link sau:https://rubyinstaller.org/downloads/
+
 > Sau khi xong Ruby, cài compass bằng lệnh CMD:
 
 <span style="color:white;background:black;">gem install compass</span>
@@ -98,11 +103,13 @@
   ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture9.PNG)
 
 > Tương tự, nếu dùng Boostrap thì y, không thì n rồi Enter tiếp.
+
 > Sau đó, một danh sách nữa hiện ra như hình dưới. Ấn Enter nếu muốn dùng mặc định. Hoặc chọn các mục cần chọn bằng phím lên xuống, hoặc có thể chọn tất cả bằng phím a rồi Enter. 
 
  ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture10.PNG)
 
  > Đợi một chút cho chương trình cài đặt xong và hưởng thành quả.
+ 
  > Nếu muốn chạy thử trên trình duyệt web thì ta dùng lênh như sau:
 
 <span style="color:white;background:black;">grunt serve</span>
