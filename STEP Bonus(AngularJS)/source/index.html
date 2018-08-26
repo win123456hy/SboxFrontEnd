@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl" ng-init="myarray=[]">
+        <h1>todos</h1>
+        <div class="mytodolist">
+            <form ng-submit="summit()">
+                <input type="text" ng-model="vl" placeholder="What needs to be done?" ng-enter="submit()">
+            </form>
+    
+            <ul ng-repeat="x in myarray|filter:{status:st} track by $index">
+                <li><input type="checkbox" ng-model="x.status" ng-change="insertinvited(x.status,$index)" />
+                    <p id="todo">
+                        {{x.do}}</p>
+                    <p id="delete" ng-click="delete($index)">X</p>
+                </li>
+            </ul>
+            <div ng-show="numberitem">
+                <span id="numbitem">{{numberitem}}</span>
+                <button ng-click="all()">All</button>
+                <button ng-click="active()">Active</button>
+                <button ng-click="completed()">Completed</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

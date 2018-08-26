@@ -21,7 +21,10 @@ var Post = [
         "body": "ullam et saepe reiciendis voluptatem adipiscisit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
     }
 ];
-var loadpage = function () {
+
+
+
+function loadPage() {
     Post.sort(function (a, b) { return b.id - a.id })
     for (let index = 0; index < Post.length; index++) {
         var row = addRow(Post[index].id, Post[index].title, Post[index].body);
@@ -29,9 +32,13 @@ var loadpage = function () {
         add.parentNode.insertBefore(row, add.nextSibling);
     }
 }
-loadpage();
+
+
+
+
+loadPage();
 // Hàng được chọn
-var selectedrow = -1;
+var selectedRow = -1;
 
 // Thêm một hàng vào bảng
 function addRow(id, title, body) {
@@ -59,10 +66,10 @@ function addRow(id, title, body) {
     // Gán sự kiện cho hàng: Khi click vào thì hightlight
     row.addEventListener("click", function () {
         this.style = "background:yellow;";
-        selectedrow = this.rowIndex;
+        selectedRow = this.rowIndex;
         var nodeList = document.querySelectorAll("tr");
         for (let index = 0; index < nodeList.length; index++) {
-            if (index != selectedrow)
+            if (index != selectedRow)
                 nodeList[index].style = "background:#FFF";
         }
     });
@@ -72,7 +79,7 @@ function addRow(id, title, body) {
 
 
 // In ra thông báo
-function messages(message, color) {
+function message(message, color) {
     var oldmess = document.getElementById("mess");
     if (oldmess) {
         document.body.removeChild(oldmess);
@@ -97,37 +104,48 @@ function messages(message, color) {
 }
 
 //Thêm dữ liệu
-function adddata() {
+function addData() {
     var title1 = document.getElementById("titled").value;
     var body1 = document.getElementById("body").value;
-
-    var idu = Post.length + 1;
-    var us = { id: idu, title: title1, body: body1 };
-    Post.push(us);
-    var row = addRow(idu, title1, body1);
-
-    var add = document.getElementById("title");
-    add.parentNode.insertBefore(row, add.parentNode.lastChild);
-    close();
-    messages("Add Post Successfully!", "green");
+    if (title1 == null || title1 == "") {
+        alert("Trường này không được để rỗng");
+        return;
+    }
+    else if (body1 == null || body1 == "") {
+        alert("Trường này không được để rỗng");
+        return;
+    }
+    else {
+        var idu = Post.length + 1;
+        var us = { id: idu, title: title1, body: body1 };
+        Post.push(us);
+        var row = addRow(idu, title1, body1);
+        var add = document.getElementById("title");
+        add.parentNode.insertBefore(row, add.parentNode.lastChild);
+        title1 = "";
+        closePopup();
+        message("Add Post Successfully!", "green");
+        document.getElementById("titled").value="";
+        document.getElementById("body").value="";
+    }
 }
 
 
 
 // Xoá dữ liệu
 function deleteData() {
-    if (selectedrow < 0) {
+    if (selectedRow < 0) {
         alert("Vui lòng chọn một hàng!");
     }
     else {
-        document.getElementById("tb").deleteRow(selectedrow);
-        close();
-        messages("Delete Post Successfully!", "green");
-        selectedrow = -1;
+        document.getElementById("tb").deleteRow(selectedRow);
+        closePopup();
+        message("Delete Post Successfully!", "green");
+        selectedRow = -1;
     }
 }
 
 // Đóng popup
-function close() {
+function closePopup() {
     location.href = "#";
 }

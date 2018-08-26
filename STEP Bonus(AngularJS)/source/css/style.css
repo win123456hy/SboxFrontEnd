@@ -1,0 +1,89 @@
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 0.5px gray;
+    line-height: 60px;
+    padding-left: 10px;
+    width: 292px;
+}
+
+h1 {
+  margin:0px;
+  margin-bottom:10px;
+    color: #ead7d7;
+    text-align: center;
+    font-size:100px;
+    font-family:Helvetica;
+    font-weight:normal;
+}
+
+.mytodolist {
+    display: block;
+    width: 360px;
+    margin: auto;
+}
+
+button {
+    width: 75px;
+    height: 30px;
+    font-size: 14px;
+    border: none;
+
+}
+
+input[type="text"] {
+    width: 550px;
+    height: 69px;
+    border:none;
+    box-shadow:0px 0px 1px #e6e6e6;
+    font-size:24px;
+    font-family:Helvetica;
+}
+input[type="checkbox"]:checked ::before {
+    content: url(../assets/img/checked.svg);
+
+}
+input[type="checkbox"]::before {
+    content: url(../assets/img/nocheck.svg);
+    display: block;
+    width: 36px;
+    height: 36px;
+}
+::placeholder {
+  font-size:26px;
+  color:#e6e6e6;
+  font-style:italic;
+}
+#delete {
+    display: inline-block;
+    margin: 0px;
+    font-size: 13px;
+    width: 30px;
+    color: red;
+    visibility: hidden;
+}
+
+li:hover #delete {
+    visibility: visible;
+}
+
+#numbitem {
+    width: 50px;
+    height: 20px;
+}
+
+#todo {
+    width: 200px;
+    margin: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size:24px;
+    font-family:Helvetica;
+}

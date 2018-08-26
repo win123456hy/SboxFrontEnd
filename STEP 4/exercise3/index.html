@@ -20,6 +20,13 @@
         }
         xhr.onloadend = function () {
             document.getElementById("urltext").style.visibility = "hidden";
+            if (xhr.status === 200)
+                document.getElementById("urltext1").innerHTML = xhr.responseText;
+            else if (xhr.status === 404)
+                document.getElementById("urltext1").innerHTML = xhr.status + "-không tìm thấy";
+            else {
+                document.getElementById("urltext1").innerHTML = "Lỗi kết nối";
+            }
         }
 
         xhr.onload = function () {
@@ -28,7 +35,7 @@
             else if (xhr.status === 404)
                 document.getElementById("urltext1").innerHTML = xhr.status + "-không tìm thấy";
             else {
-                document.getElementById("urltext1").innerHTML = xhr.status;
+                document.getElementById("urltext1").innerHTML = "Lỗi kết nối";
             }
         };
         xhr.send();

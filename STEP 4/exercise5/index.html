@@ -10,6 +10,7 @@
 <body id="mybody">
     <script>
         var programleaguage = ['js', 'css', 'html', 'c#', 'java', 'c++', 'pascal', 'ruby', 'r', 'python', 'nodejs'];
+        var timeInterval = null;
         function createList() {
 
             for (let index = 0; index < programleaguage.length; index++) {
@@ -34,7 +35,14 @@
             }
         }
         createList();
-        setInterval(checkList, 1000);
+
+
+        for (let index = 0; index < programleaguage.length; index++) {
+            var ch = document.getElementById("checkbox" + index).onchange = function name(params) {
+                clearInterval(timeInterval);
+                timeInterval = setInterval(checkList, 1000);
+            };
+        }
 
         function checkList() {
             var lg = document.getElementById("lg");
@@ -44,14 +52,15 @@
             let leaguagechoose = [];
             for (let index = 0; index < programleaguage.length; index++) {
                 var ch = document.getElementById("checkbox" + index);
-                if (ch.checked)
+                if (ch.checked) {
                     leaguagechoose.push(programleaguage[index]);
+                }
             }
-            
+
             var p = document.createElement("p");
-            p.setAttribute("id","lg");
-            p.style.fontSize="36px";
-            var t = document.createTextNode("Các ngôn ngữ bạn đã chọn là:"+leaguagechoose);
+            p.setAttribute("id", "lg");
+            p.style.fontSize = "36px";
+            var t = document.createTextNode("Các ngôn ngữ bạn đã chọn là:" + leaguagechoose);
             p.appendChild(t);
             var mybody = document.getElementById("mybody");
             mybody.insertBefore(p, mybody.lastChild);
