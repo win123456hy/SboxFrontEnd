@@ -20,8 +20,15 @@
 ```
 
 >và chèn tương tự như trên vào trang.
+## 2. Tạo project để code
+### 2.1 Code online
+> Đầu tiên, vào trang chủ https://jsfiddle.net và tạo tài khoản.
 
-## 2. Directives trong AngularJS
+> Sau khi tạo tài khoản và đăng nhập xong. Trên màn hình sẽ hiện 
+
+![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture.PNG)
+
+## 3. Directives trong AngularJS
 
 > __Directive__ là cú pháp mà AngularJS tạo ra và được đặt vào trong các thẻ 
 > HTML dùng để định nghĩa thêm giúp cho việc quản lý code của AngularJS thuận 
