@@ -21,13 +21,96 @@
 
 >và chèn tương tự như trên vào trang.
 ## 2. Tạo project để code
-### 2.1 Code online
+### 2.1 Tạo với JSFiddle
 > Đầu tiên, vào trang chủ https://jsfiddle.net và tạo tài khoản.
 
 > Sau khi tạo tài khoản và đăng nhập xong. Trên màn hình sẽ hiện 
 
 ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture.PNG)
 
+> Nhìn vào hình ta thấy màn hình được chia ra làm 4 phần:
+- Góc trên bên trái: Dùng để viết  __HTML__. 
+- Góc trên bên phải: Dùng để viết  __CSS__.
+- Góc dưới bên trái: Dùng để viết __Javascipt__.
+- Góc dưới bên phải: Phân vùng __Preview__ sản phẩm, project.
+
+> Để code AngularJS trên JSFiddle ta có 2 cách:
+- Cách 1: Bấm vào Resource(phần mũi tên chỉ). Nhập link sau phần src ở phần II. Hướng dẫn -> 1. Cài đặt(VD:"https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js) hoặc gõ vào phần Javascrip/CSS Url là AngularJS và chọn nó.
+
+![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture1.PNG)
+
+![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture2.PNG)
+
+- Cách 2: Bấm vào JavaScipt.... giống hình bên dưới.
+
+![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture3.PNG)
+
+        Sau đó chọn như trong hình.
+
+ ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture4.PNG)
+
+ > Vậy là ta đã hoàn thành việc tạo một môi trường code online học Angular.
+
+ ### 2.2 Tạo với Yeoman AngularJS
+
+ > Với __Yeoman AngularJS__ thì việc tạo project sẽ được tự động hoá và được viết theo mô hình MVC. 
+
+ > Trước tiên, để cài được Yeoman thì máy chúng ta phải cài NodeJS. Để cài NodeJS ta vào trang
+ https://nodejs.org/en/ , tài về máy và cài đặt.
+> Khi cài đặt xong, ta cài yo và các trình quản lý khác bằng CMD.
+
+<span style="color:white;background:black;">npm install -g grunt-cli bower yo generator-karma generator-angular</span>
+
+
+
+
+> Sau đó cài AngularJS với Bower bằng CMD như sau:
+> __Chú ý__: Phải cài __Git__ trước khi tiến hành cài AngularJS.
+> Link:https://git-scm.com/
+
+<span style="color:white;background:black;">bower install angular</span>
+
+> __Chú ý__: Nếu chương trình báo lỗi thiếu Bower thì ta phải cài Bower bằng CMD như sau:
+
+<span style="color:white;background:black;">npm install bower</span>
+
+
+> Tiếp đến tạo một thư mục để chưa project bằng cách bình thường hoặc CMD. Sau khi tạo xong, mở thư mục đó lên và bấm vào thanh URL và gõ cmd và bấm Enter như hình để vào cmd:
+
+ ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture6.PNG)
+
+  ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture7.PNG)
+
+> Sau khi vào CMD,ta tiến hành cài đặt Yeoman bằng lệnh:
+
+<span style="color:white;background:black;">yo angular</span>
+
+> Màn hình sau đó sẽ như bên dưới, bấm n sau đó Enter.
+
+ ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture8.PNG)
+
+ > Tiếp theo, nếu bạn dùng Sass trong project thì bấm y. Nếu không bấm n rồi Enter.
+ > Chú ý: Cần phải cài Ruby và Compass. Để cài Ruby vào link sau:https://rubyinstaller.org/downloads/
+> Sau khi xong Ruby, cài compass bằng lệnh CMD:
+
+<span style="color:white;background:black;">gem install compass</span>
+
+  ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture9.PNG)
+
+> Tương tự, nếu dùng Boostrap thì y, không thì n rồi Enter tiếp.
+> Sau đó, một danh sách nữa hiện ra như hình dưới. Ấn Enter nếu muốn dùng mặc định. Hoặc chọn các mục cần chọn bằng phím lên xuống, hoặc có thể chọn tất cả bằng phím a rồi Enter. 
+
+ ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture10.PNG)
+
+ > Đợi một chút cho chương trình cài đặt xong và hưởng thành quả.
+ > Nếu muốn chạy thử trên trình duyệt web thì ta dùng lênh như sau:
+
+<span style="color:white;background:black;">grunt serve</span>
+
+> Giờ ta đã có một project MVC để học AngularJS với Yeoman. Hình minh hoạ:
+
+ ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture11.PNG)
+ 
 ## 3. Directives trong AngularJS
 
 > __Directive__ là cú pháp mà AngularJS tạo ra và được đặt vào trong các thẻ 
