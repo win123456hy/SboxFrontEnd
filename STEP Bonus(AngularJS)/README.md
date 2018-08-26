@@ -39,15 +39,15 @@
 
 ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture1.PNG)
 
-![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture2.PNG)
+![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture3.PNG)
 
 - Cách 2: Bấm vào JavaScipt.... giống hình bên dưới.
 
-![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture3.PNG)
+![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture4.PNG)
 
         Sau đó chọn như trong hình.
 
- ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture4.PNG)
+ ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture5.PNG)
 
  > Vậy là ta đã hoàn thành việc tạo một môi trường code online học Angular.
 
