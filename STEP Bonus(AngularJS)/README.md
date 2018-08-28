@@ -51,7 +51,7 @@
 
  > Vậy là ta đã hoàn thành việc tạo một môi trường code online học Angular. Việc còn lại là các bạn chỉ cần viết code thôi.
 
-> Link demo:
+> Link code demo: https://jsfiddle.net/win123456hy/4ucpzL6m/554/
  ### 2.2 Tạo với Yeoman AngularJS
 
  > Với __Yeoman AngularJS__ thì việc tạo project sẽ được tự động hoá và được viết theo mô hình MVC. 
