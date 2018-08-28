@@ -1,0 +1,33 @@
+<h1 id="titleToDo">todos</h1>
+    <div class="mytodolist" ng-init="myarray=[]">
+        <form class="inputToDo" ng-submit="summit()">
+            <div class="cbDoFull">
+                <input id="cbDoAll" type="checkbox" ng-model="abc" ng-change="changeAll(abc)" ng-if="myarray.length" />
+            </div>
+            <input type="text" ng-model="vl" placeholder="What needs to be done?" ng-enter="submit()">
+        </form>
+
+        <ul class="listDo" ng-repeat="x in myarray|filter:{status:st} track by $index">
+            <li class="listDoItem"><input id="cbDoOne" type="checkbox" ng-model="x.status" ng-change="insertinvited(x.status,$index)" />
+                <p id="todo" ng-if="!x.status">
+                    {{x.do}}</p>
+                <p id="todo" style="color:#e6e6e6;text-decoration:line-through" ng-if="x.status">
+                    {{x.do}}</p>
+                <img id="delete" ng-click="delete($index)" />
+            </li>
+        </ul>
+        <div class="underList" ng-show="myarray.length">
+            <div class="features">
+                <span id="numbitem">{{numberitem}}</span>
+                <button class="btnFeature" id="btnAll" ng-click="all()">All</button>
+                <button class="btnFeature" ng-click="active()">Active</button>
+                <button  class="btnFeature" ng-click="completed()">Completed</button>
+                <button  class="btnFeature" id="btnClearC" ng-show="clrc" ng-click="clearCompleted()">Clear completed</button>
+            </div>
+            <div class="flatdown1"></div>
+            <div class="flatdown2"></div>
+
+        </div>
+    </div>
+    </div>
+    </div>

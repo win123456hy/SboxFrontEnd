@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Page Title</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
 </head>
+
 <body ng-app="myApp" ng-controller="myCtrl" ng-init="myarray=[]">
-        <h1>todos</h1>
-        <div class="mytodolist">
-            <form ng-submit="summit()">
-                <input type="text" ng-model="vl" placeholder="What needs to be done?" ng-enter="submit()">
-            </form>
-    
-            <ul ng-repeat="x in myarray|filter:{status:st} track by $index">
-                <li><input type="checkbox" ng-model="x.status" ng-change="insertinvited(x.status,$index)" />
-                    <p id="todo">
-                        {{x.do}}</p>
-                    <p id="delete" ng-click="delete($index)">X</p>
-                </li>
-            </ul>
-            <div ng-show="numberitem">
+    <h1>todos</h1>
+    <div class="mytodolist">
+        <form ng-submit="summit()">
+            <div class="cbDoFull">
+                <input id="cbDoAll" type="checkbox" ng-model="abc" ng-change="changeAll(abc)" ng-if="myarray.length" />
+            </div>
+            <input type="text" ng-model="vl" placeholder="What needs to be done?" ng-enter="submit()">
+        </form>
+
+        <ul ng-repeat="x in myarray|filter:{status:st} track by $index">
+            <li><input id="cbDoOne" type="checkbox" ng-model="x.status" ng-change="insertinvited(x.status,$index)" />
+                <p id="todo" ng-if="!x.status">
+                    {{x.do}}</p>
+                <p id="todo" style="color:#e6e6e6;text-decoration:line-through" ng-if="x.status">
+                    {{x.do}}</p>
+                <img id="delete" ng-click="delete($index)" />
+            </li>
+        </ul>
+        <div class="underList" ng-show="myarray.length">
+            <div class="features">
                 <span id="numbitem">{{numberitem}}</span>
-                <button ng-click="all()">All</button>
+                <button id="btnAll" ng-click="all()">All</button>
                 <button ng-click="active()">Active</button>
                 <button ng-click="completed()">Completed</button>
+                <button id="btnClearC" ng-show="clrc" ng-click="clearCompleted()">Clear completed</button>
             </div>
+            <div class="flatdown1"></div>
+            <div class="flatdown2"></div>
+
         </div>
+    </div>
     </div>
     </div>
     <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -1,6 +1,14 @@
-var app = angular.module("myApp", []);
-app.controller("myCtrl", function ($scope) {
+'use strict';
 
+/**
+ * @ngdoc function
+ * @name toDoListWithYeoManApp.controller:TodolistCtrl
+ * @description
+ * # TodolistCtrl
+ * Controller of the toDoListWithYeoManApp
+ */
+angular.module('toDoListWithYeoManApp')
+  .controller('TodolistCtrl', function ($scope) {
     $scope.dem = () => {
         $scope.numberitem = 0;
         for (let i = 0; i < $scope.myarray.length; i++) {
@@ -101,4 +109,4 @@ app.controller("myCtrl", function ($scope) {
         console.log($scope.myarray);
         $scope.dem();
     }
-});
+  });
