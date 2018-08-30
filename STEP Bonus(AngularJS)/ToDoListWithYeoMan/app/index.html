@@ -15,43 +15,48 @@
 	 <link rel="stylesheet" href="styles/todolist.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="toDoListWithYeoManApp">
+  <body ng-app="toDoListWithYeoManApp" ng-controller="TodolistCtrl" ng-init="myarray=[]">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
+       <h1>todos</h1>
+    <div class="mytodolist">
+        <form id="mainForm" ng-submit="summit()">
+            <div class="cbDoFull">
+                <input id="cbDoAll" type="checkbox" ng-model="abc" ng-change="changeAll(abc)" ng-if="myarray.length" />
+            </div>
+            <input id="mainInput" type="text" ng-model="vl" placeholder="What needs to be done?" ng-enter="submit()">
+        </form>
 
-            <a class="navbar-brand" href="#/">toDoListWithYeoMan</a>
-          </div>
+        <ul ng-repeat="x in myarray|filter:{status:st} track by $index">
+            <li><input id="cbDoOne" type="checkbox" ng-model="x.status" ng-change="insertinvited(x.status,$index)" />
+                <p id="todo" ng-show="!isEditing" ng-if="!x.status" ng-dblclick="edit()">
+                    {{x.do}}</p>
+                <form ng-show="isEditing" ng-submit="sm($index,x.do)">
+                    <input id="inputItem" type="text" ng-model="x.do" />
+                </form>
+                <p id="todo" style="color:#e6e6e6;text-decoration:line-through" ng-if="x.status">
+                    {{x.do}}</p>
+                <img id="delete" ng-click="delete($index)" />
+            </li>
+        </ul>
+        <div class="underList" ng-show="myarray.length">
+            <div class="features">
+                <span id="numbitem">{{numberitem}}</span>
+                <button id="btnAll" ng-click="all()">All</button>
+                <button ng-click="active()">Active</button>
+                <button ng-click="completed()">Completed</button>
+                <button id="btnClearC" ng-show="clrc" ng-click="clearCompleted()">Clear completed</button>
+            </div>
+            <div class="flatdown1"></div>
+            <div class="flatdown2"></div>
 
-          <div class="collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-			   <li><a ng-href="#!/toDoList">To-do List</a></li>
-              <li><a ng-href="#!/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
         </div>
-      </div>
     </div>
-
-    <div class="container">
-    <div ng-view=""></div>
     </div>
-
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
     </div>
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

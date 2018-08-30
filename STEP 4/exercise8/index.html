@@ -14,11 +14,12 @@
         <img id="imgstatus" width="50px" height="50px" src="assets/img/tenor.gif" />
     </div>
     <script>
-
+		var timeout=null;
         function add() {
             document.getElementById("status").style.visibility = "hidden";
             document.getElementById("imgstatus").style.visibility = "visible";
-            setTimeout(function () {
+			clearTimeout(timeout);
+             timeout = setTimeout(function () {
                 var x = Math.floor((Math.random() * 10) + 1);
                 if (x % 2 == 0) {
                     document.getElementById("status").innerHTML = "Đã thêm";

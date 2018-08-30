@@ -118,6 +118,8 @@
 
  ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%20Bonus(AngularJS)/source/assets/img/Capture11.PNG)
  
+ > __Project__:
+ > https://github.com/win123456hy/SboxFrontEnd/tree/master/STEP%20Bonus(AngularJS)/ToDoListWithYeoMan
 ## 3. Directives trong AngularJS
 
 > __Directive__ là cú pháp mà AngularJS tạo ra và được đặt vào trong các thẻ 
@@ -304,5 +306,281 @@
                 });
 ```
 
-## Link bài làm: 
-[https://jsfiddle.net/win123456hy/4ucpzL6m/519/]
+## 4. Service trong AngularJS
+
+### 4.1 Khái niệm Service
+
+> __Service__ là các hàm có sẵn(Built-in Services) hoặc tự viết(Custom Services) để thực hiện một công việc nào đó. Việc sử dụng Service giúp cho việc viết code nhanh hơn, dễ bảo trì(Maintainable) và kiểm thử(Testable).
+
+### 4.2 Cách dùng
+
+#### 4.2.1 Built-in Services
+
+> AngularJS cung cấp hơn 30 Built-in Services. Sau đây là một số service cơ bản:
+
+- __$http__: Service dùng để tạo __Ajax Request__ lên server.
+
+```javascript
+            var app = angular.module("myApp", []);
+            app.controller("myCtrl", function ($scope, $http) {
+                $http.get("https://jsonplaceholder.typicode.com/users")
+                    .then(function (response) {
+                        $scope.myData = response;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            });
+```
+> __Demo__:https://jsfiddle.net/win123456hy/qc9hge5s/
+
+- __$location__: Service dùng để lấy URL trên thanh địa chỉ hoặc tạo URL mới.
+
+```javascript
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function($scope, $location) {
+                $scope.absUrl = $location.absUrl(); 
+            });
+```
+> __Demo__:https://jsfiddle.net/win123456hy/jwogubvf/
+
+#### 4.2.2 Custom Services
+
+> Có 3 cách để tạo Custom Service thường dùng là: 
+
+- __Factory method__: là cách viết tập hợp các hàm bên trong. Tên Factory được hiểu như một class. Việc gọi các hàm ra trong Controller giống như việc gọi phương thức trong một class. Factory trả về là một đối tượng(Object)
+
+> VD: Dưới đây là cách tạo một Service ghi ra log tuỳ chỉnh. 
+```javascript
+            app.factory('LogName', function() {
+		        var myName="Tên tôi là Đạt";
+            return{
+                log: function(){
+                        console.log(myName);
+                }
+            }
+            });
+```
+
+> Cách chạy hàm này như sau:
+
+```javascript
+            app.controller('myCtrl', function($scope, LogName) {
+            LogName.log("Dat");
+            });
+```
+
+> __Demo__:https://jsfiddle.net/win123456hy/gx8yLwcz/
+- __Service method__: là cách viết dùng để định nghĩa lại một service và biến thành một Service bản sao. Chúng ta có thể đổi tên, thêm các phương thức cho service đó. Khác với Factory, Service không trả về bất kỳ thứ gì.
+
+> VD: Định nghĩa lại Services LogName là:
+
+```javascript
+            app.factory('LogName', function() {
+                return{
+                log: function(myName){
+                console.log(myName);
+                }
+            }
+            });
+```
+
+> Ta sẽ định nghĩa bằng Service Method như sau:
+
+```javascript
+            app.service('LogNameFix', function(LogName) {
+                    this.log=function(a){
+                return LogName.log("My name is"+a);
+                }
+            });
+```
+
+> Chạy service:
+
+```javascript
+            app.controller('myCtrl', function($scope, LogName,LogNameFix) {
+            LogName.log("Đạt");
+            LogNameFix.log("Đạt");
+```
+
+> __Demo__:https://jsfiddle.net/win123456hy/8ando3cy/
+
+- __Provider Method__: là cách viết khó. Provider trả về giá trị bằng việc sử dụng hàm $get(). 
+> VD:
+```javascript
+            app.provider('logService', function() {
+            return {
+                $get: function() {
+                return {
+                    messageCount: 0,
+                    log: function(name) {
+                    console.log("My name is:"+name);
+                    }
+                };
+                }
+            }
+            });
+```
+> Chạy:
+```javascript
+            app.controller("myCtrl",function ($scope,logService) {
+            logService.log("Dat");
+            });
+```
+
+> __Demo__:https://jsfiddle.net/win123456hy/5sbfu0he/
+
+## 5. Decorator trong AngularJS
+### 5.1 Decorator là gì?
+
+> __Decorator__ được hiểu là một mẫu thiết kế được sử dụng để sửa đổi hoặc trang trí của một lớp mà không sửa đổi mã nguồn gốc. Trong AngularJS, Decorator là các hàm cho phép Service, Directive hoặc Filter được sửa đổi trước khi ta sử dụng nó.
+
+### 5.2 Cách sử dụng
+> Có 2 cách tạo Decorator:
+- Cách 1: __$provide.decorator__
+
+> Decorator dùng $provide và $delegate để thay đổi service.
+
+```javascript
+            angular.module('myApp', [])
+
+            .config([ '$provide', function($provide) {
+
+            $provide.decorator('$log', [
+                '$delegate',
+                function $logDecorator($delegate) {
+
+                var originalWarn = $delegate.warn;
+                $delegate.warn = function decoratedWarn(msg) {
+                    msg = 'Decorated Warn: ' + msg;
+                    originalWarn.apply($delegate, arguments);
+                };
+
+                return $delegate;
+                }
+            ]);
+            }]);
+```
+
+> __Demo__: https://jsfiddle.net/win123456hy/jg4d37yv/
+
+- Cách 2: __module.decorator__
+
+
+
+#### 5.2.1 Tạo Decorator với $provide.decorator
+
+## 6. Route trong AngularJS
+
+### 6.1 Khái niệm
+
+> __Route__ là cách tạo các URL khác cho ứng dụng. Route được định nghĩa sau dấu #. Route được tạo ra để điều hướng sang trang khác mà không reload lại trang, là cách để tạo ra trang SPA(Single Page Application).
+
+> VD: http://localhost:3000/index.html#View1
+
+> Khi chạy, AngularJS sẽ nhìn vào Route để hiển thị phần HTML nào được hiển thị.
+
+### 6.2 Cách sử dụng
+
+> Để sử dụng Route, cần phải include trong trang đó 2 dòng sau:
+
+```javascript
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-route.min.js"></script>
+```
+> Route dùng __$routeProvider__ provider. Khi $routeProvider được định nghĩa thì ta có thể dùng được 2 service là: __$route__ và __$routeParams__
+> $routeProvider có 2 phương thức để định tuyến là:
+- __.when(path,route)__: Định nghĩa một route mới cho $route
+- __.otherwise(params)__: Định nghĩa route sẽ được sử dụng khi gọi một URL không tồn tại trong các route được khai báo ở trên.
+
+#### 6.2.1 Phương thức when(path,route)
+
+> __path__: là đường dẫn phía sau kí hiệu #.
+> __route__: là route với các thuộc tính như sau:
+
+> 1. _Template_: là một chuỗi bao gồm các thẻ html
+> 2. _TemplateUrl_: là đường dẫn hoặc function trả về đường dẫn. Nếu dùng templateUrl, angularjs sẽ load view thông qua XHR(XmlHtmlRequest) và view sẽ được hiển thị trong ng-view directive
+> 3. _Controller_: là cách trỏ đến controller để điều khiển view tương ứng khi template được tải lên trình duyệt
+> 4. _ControllerAs_: định nghĩa tên ngắn gọn của controller ở trên và nó được sử dụng như một class.
+> 5. _redirectTo_: chuyển đến một URL cụ thể. Nó là một chuỗi hoặc một function 
+
+```javascript
+            var app = angular.module("myApp", ["ngRoute"]);
+            app.config(function($routeProvider) {
+                $routeProvider
+                .when("/", {
+                    templateUrl : "main.htm",
+                })
+                .when("/london", {
+                    templateUrl : "london.htm",
+                    controller : "londonCtrl"
+                })
+                .when("/paris", {
+                    templateUrl : "paris.htm",
+                    controller : "parisCtrl"
+                });
+                .otherwise({
+                    redirectTo: '/'
+                });
+            });
+```
+
+#### 6.2.2 Phương thức otherwise(params)
+
+> Otherwise dùng để định nghĩa đường dẫn khi mà URL không thuộc các mệnh đề when ở trên.
+
+#### 6.2.3 $routeParams service
+
+> $routeParams cho phép chúng ta lấy các tham số của URL hiện tại.
+
+> VD: http://localhost:8000/index.html#pages/1?title=hello
+
+```javascript
+            app.config(function($routeProvider) {
+                $routeProvider
+                .when('/pages/:pageNumber', {
+                    controller: 'TemplateCtrl'
+                }
+                })
+                .otherwise({
+                    redirectTo: '/'
+                })
+            })
+            app.controller('TemplateCtrl', function($scope, $routeParams){
+                $scope.pageNumber = $routeParams.pageNumber
+                $scope.title = $routeParams.title
+            });
+```
+
+```html
+            <div>page : {{ pageNumber }}</div>
+            <div>title: {{ title }}</div>
+```
+
+> Kết quả sẽ là 
+
+```html
+            page: 1
+            title: hello
+```
+
+> __Tìm hiểu thêm tại__: https://www.w3schools.com/angular/angular_routing.asp
+
+## 7. Tạo một Directive
+
+> Việc tạo một __Directive__, ta dùng .directive function và đặt tên directive bằng camelCase. Khi ta gọi directive thì ta phải chia tên ra bằng '-'.
+
+> VD: Tên directive mới theo camelCase là: myDirective
+
+> Khi ta gọi thì viết thường hết và thêm '-' sau mỗi từ. Ở vd này ta sẽ gọi như này: my-directive
+
+> Hàm __.directive__ trả về một Object có các thuộc tính thường dùng là:
+
+* restrict: là cách gọi directive trên HTML theo các dạng cụ thể như: Element, Attribute, Class, Comment.
+
+> Giá trị của restrict là các từ viết tắt của 4 dạng trên là: E(viết tắt của Element), A(viết tắt của Attribute), C(viết tắt của Class), M(viết tắt của Comment). Mặc định giá trị của restrict là EA.
+
+* template: là một chuỗi hoặc hàm mà trả về HTML.
+
+> __Demo__: https://jsfiddle.net/win123456hy/z4wn3pmj/ 
+

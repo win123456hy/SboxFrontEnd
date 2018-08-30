@@ -1,10 +1,10 @@
-.listDo{
+ul {
     list-style: none;
     margin: 0px;
     padding: 0px;
 }
 
-.listDoItem {
+li {
     position: relative;
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@
     width: 540px;
 }
 
-#titleToDo{
+h1 {
   margin:0px;
   margin-bottom:10px;
     color: #ead7d7;
@@ -27,7 +27,8 @@
 .cbDoFull{
     display: inline-block;width: 58px;height: 30px;
 }
-.inputToDo{
+
+#mainForm{
     width: 550px;
     box-shadow:0px 0px 1px #e6e6e6;
     display: flex;
@@ -74,7 +75,7 @@
     box-shadow: 0px 5px 20px 0px #B4B4B4;
 }
 
-.btnFeature {
+button {
     margin-right: 10px;
     padding: 5px 8px 5px 8px;
     font-size: 14px;
@@ -84,16 +85,16 @@
     color: #777777;
     background: white;
 }
-.btnFeature:focus{
+button:focus{
     outline: none;
     border:solid 1px #EFD5D5;
     border-radius: 5px;
 }
-.btnFeature:focus:hover{
+button:focus:hover{
     border:solid 1px #EFD5D5;
     border-radius: 5px;
 }
-.btnFeature:hover{
+button:hover{
     border:solid 1px #F7EAEA;
     border-radius: 5px;
 }
@@ -109,24 +110,36 @@
 #btnClearC:hover{
     text-decoration: underline;
 }
-input[type="text"] {
+#mainInput{
     width: 450px;
     height: 69px;
     border:none;
     font-size:24px;
     font-family:Helvetica;
 }
-input[type="text"]:focus{
+#mainInput:focus{
+    outline: none;
+}
+#inputItem{
+    font-size:24px;
+    font-family:Helvetica; 
+    margin-left: 30px !important;
+    margin-top: 1px !important;
+    height: 58px;
+    width: 490px;
+    border: solid 0.5px gray;
+}
+#inputItem:focus{
     outline: none;
 }
 #cbDoOne:checked::before{
-    content: url("../images/checked.svg");
+    content: url(../images/checked.svg);
     position: absolute;
     left: 8px;
     top: 15px;
 }
 #cbDoOne::before{
-    content: url("../images/nocheck.svg");
+    content: url(../images/nocheck.svg);
     display: block;
     width: 36px;
     height: 36px;
@@ -135,14 +148,14 @@ input[type="text"]:focus{
     top: 15px;
 }
 #cbDoAll:checked::before{
-    content: url("../images/downChecked.svg");
+    content: url(../images/downChecked.svg);
 }
 #cbDoAll{
     margin-top: 7px;
     margin-left: 15px;
 }
 #cbDoAll::before{
-    content: url("../images/downUnChecked.svg");
+    content: url(../images/downUnChecked.svg);
     display: block;
     width: 24px;
 }
@@ -163,7 +176,7 @@ input[type="text"]:focus{
     content: url("../images/deleteHover.svg");
 }
 
-.listDoItem:hover #delete {
+li:hover #delete {
     visibility: visible;
     
 }

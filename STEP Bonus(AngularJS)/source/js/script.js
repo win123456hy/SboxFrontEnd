@@ -83,22 +83,37 @@ app.controller("myCtrl", function ($scope) {
         $scope.dem();
     }
     $scope.clearCompleted = () => {
-        for (let index = 0; index < $scope.myarray.length; index++) {
-            if ($scope.myarray[index].status === true) {
+        var index = 0;
+
+        while (true) {
+            if(index<$scope.myarray.length){
+                if ($scope.myarray[index].status == true)
                 $scope.myarray.splice(index, 1);
             }
-        }
-        for (let index = 0; index < $scope.myarray.length; index++) {
-            if ($scope.myarray[index].status === true) {
-                $scope.myarray.splice(index, 1);
+
+            if (index == $scope.myarray.length) {
+                var count = 0;
+                var k=$scope.myarray.length;
+                for (let i = 0; i < k; i++) {
+                    if ($scope.myarray[i].status == true)
+                        count++;
+                }
+                if (count == 0) {
+                    break;
+                }
+                index = 0;
             }
-        }
-        for (let index = 0; index < $scope.myarray.length; index++) {
-            if ($scope.myarray[index].status === true) {
-                $scope.myarray.splice(index, 1);
-            }
+            else
+                index++;
         }
         console.log($scope.myarray);
         $scope.dem();
+    }
+    $scope.edit=function () {
+        $scope.isEditing=true;
+    }
+    $scope.sm=function ($index,x) {
+        $scope.myarray[$index].do=x;
+        $scope.isEditing=false;
     }
 });

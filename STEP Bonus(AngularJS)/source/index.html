@@ -11,17 +11,20 @@
 <body ng-app="myApp" ng-controller="myCtrl" ng-init="myarray=[]">
     <h1>todos</h1>
     <div class="mytodolist">
-        <form ng-submit="summit()">
+        <form id="mainForm" ng-submit="summit()">
             <div class="cbDoFull">
                 <input id="cbDoAll" type="checkbox" ng-model="abc" ng-change="changeAll(abc)" ng-if="myarray.length" />
             </div>
-            <input type="text" ng-model="vl" placeholder="What needs to be done?" ng-enter="submit()">
+            <input id="mainInput" type="text" ng-model="vl" placeholder="What needs to be done?" ng-enter="submit()">
         </form>
 
         <ul ng-repeat="x in myarray|filter:{status:st} track by $index">
             <li><input id="cbDoOne" type="checkbox" ng-model="x.status" ng-change="insertinvited(x.status,$index)" />
-                <p id="todo" ng-if="!x.status">
+                <p id="todo" ng-show="!isEditing" ng-if="!x.status" ng-dblclick="edit()">
                     {{x.do}}</p>
+                <form ng-show="isEditing" ng-submit="sm($index,x.do)">
+                    <input id="inputItem" type="text" ng-model="x.do" />
+                </form>
                 <p id="todo" style="color:#e6e6e6;text-decoration:line-through" ng-if="x.status">
                     {{x.do}}</p>
                 <img id="delete" ng-click="delete($index)" />

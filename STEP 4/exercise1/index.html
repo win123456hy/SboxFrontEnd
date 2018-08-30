@@ -12,11 +12,14 @@
     <p style="font-size:56px;text-align:center" id="urltext"></p>
     <script type="text/javascript">
 		
-        var text= window.location.href;
+       
+		var text= window.location.href;
 		if(text.split("index.html")[1]=="")
 			document.getElementById("urltext").innerHTML="Hello";
 		else
             document.getElementById("urltext").innerHTML = text.split("index.html#/")[1];
+		
+		
     </script>
 </body>
 
