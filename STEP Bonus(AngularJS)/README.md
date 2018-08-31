@@ -439,6 +439,11 @@
 > Có 2 cách tạo Decorator:
 - Cách 1: __$provide.decorator__
 
+- Cách 2: __module.decorator__
+
+#### 5.2.1 Tạo Decorator với $provide.decorator
+
+
 > Decorator dùng $provide và $delegate để thay đổi service.
 
 ```javascript
@@ -464,12 +469,35 @@
 
 > __Demo__: https://jsfiddle.net/win123456hy/jg4d37yv/
 
-- Cách 2: __module.decorator__
+#### 5.2.2 Tạo Decorator với module.decorator
 
+> Hàm này giống với $provide.decorator ngoại trừ việc nó được hiển thị thông qua module API. Nó cho phép ta tách các mẫu Decorator từ khối module cấu hình.
 
+> Vì vậy ta có thể áp dụng nhiều Decorator. Chú ý rằng ứng dụng Decorator luôn chạy theo thứ tự khai báo.
 
-#### 5.2.1 Tạo Decorator với $provide.decorator
+* Nếu một Service được trang trí bởi cả 2 cách $provide.decorator and module.decorator thì nó sẽ chạy theo thứ tự. VD:
 
+```javascript
+            angular
+            .module('theApp', [])
+            .factory('theFactory', theFactoryFn)
+            .config(function($provide) {
+            $provide.decorator('theFactory', provideDecoratorFn); // chạy đầu tiên
+            })
+            .decorator('theFactory', moduleDecoratorFn); // chạy thứ hai
+```
+
+* Nếu một Service được khai báo nhiều lần, một Decorator sẽ trang trí Service mà được khai báo cuối cùng. VD:
+
+```javascript
+            angular
+            .module('theApp', [])
+            .factory('theFactory', theFactoryFn)
+            .decorator('theFactory', moduleDecoratorFn)
+            .factory('theFactory', theOtherFactoryFn);
+
+            // `theOtherFactoryFn` được chọn là 'theFactory' provider và nó được trang trí thông qua `moduleDecoratorFn`.
+```
 ## 6. Route trong AngularJS
 
 ### 6.1 Khái niệm
