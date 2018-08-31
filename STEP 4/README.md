@@ -116,7 +116,7 @@
 
 > Giờ, chúng ta hãy xâu chuỗi các Promise lại với nhau. 
 
-            ```javascript
+```javascript
             var askMom = function () {
                 willIGetNewPhone
                 .then(showOff) // đặt ở đây
