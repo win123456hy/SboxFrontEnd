@@ -1,7 +1,7 @@
 # Promise trong Javascript
 
 ## Khái niệm
-> Một ví dụ Promise trong thực tế:
+> Ví dụ Promise trong thực tế:
 
         "Tưởng tượng như bạn là một đứa trẻ. Mẹ bạn hứa với bạn rằng mẹ sẽ mua cho con một chiếc điện thoại mới vào tuần sau."
 
