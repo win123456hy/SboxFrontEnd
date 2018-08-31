@@ -2,7 +2,7 @@
 # HỌC ANGULARJS
 ## I .AngularJS là gì?
 
->__AngularJS__ là một framework dành cho các web _dynamic_. Dùng để tạo các 
+>__AngularJS__ là framework dành cho các web _dynamic_. Dùng để tạo các 
 >ứng dụng _Client-Side_ theo mô hình _MVC_. Nó hoạt động dạng _Single Page_. 
 >Hỗ trợ _binding_ và _depending  injection_. Nó cho phép mở rộng cú pháp HTML
 > để diễn đạt các thành phần ứng dụng một các rõ ràng.
