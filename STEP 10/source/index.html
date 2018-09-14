@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+</head>
+
+<body>
+    <div id="toDoApp">
+        <div>
+            <input type="checkbox" @change="changeAll(stc)" v-show="todos.length>0" v-model="stc" />
+            <input type="text" v-model="abc" @keyup.enter="addData" />
+        </div>
+        <div>
+            <ul v-for="(todo,index) in showableTodos">
+                <li>
+					<input type="checkbox" v-model="todo.status" @change="changeStatus(todo.status,index)" />
+					<span>{{todo.id}}-{{todo.do}}</span>
+                    <img id="deleteItem" @click="deleteToDo(index)">
+                </li>
+            </ul>
+        </div>
+        <div v-show="todos.length>0">
+            <span>{{numItemActived}}</span>
+            <button @click="allTodos">All</button>
+            <button @click="allActive">Active</button>
+            <button @click="allCompleted">Completed</button>
+            <button v-show="clearable" @click="clearCompleted">Clear Completed</button>
+        </div>
+    </div>
+    <script src="../source/js/script.js"></script>
+</body>
+
+</html>

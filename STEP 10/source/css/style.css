@@ -1,0 +1,17 @@
+li{
+    display: flex;
+    align-items: center;
+}
+li:hover #deleteItem {
+    visibility: visible;
+    
+}
+#deleteItem {
+    content: url("../assets/img/delete.svg");
+    width: 12px;
+    visibility: hidden;
+}
+#deleteItem:hover {
+    visibility: visible;
+    content: url("../assets/img/deleteHover.svg");
+}
