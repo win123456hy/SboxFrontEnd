@@ -377,7 +377,7 @@ thì những thay đổi với b sẽ không kích hoạt trên view.
 ```
 ### Vòng đời của một Component
 
-![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%2010/lifecycle.PNG)
+![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%2010/lifecycle.png)
 
 > Vòng đời  của một Component gồm có 4 phần chính:
 
