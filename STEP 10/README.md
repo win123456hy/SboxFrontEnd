@@ -375,6 +375,132 @@ thì những thay đổi với b sẽ không kích hoạt trên view.
             }
             });
 ```
+
+### Component
+
+> __Component__(tạm dịch là thành phần) là các __đối tượng Vue__ có thể sử dụng lại được với một cái tên nào đó bên trong một Vue.
+
+> VD: 
+
+```html
+            <div id="components-demo">
+                <button-counter></button-counter>
+            </div>
+```
+```javascript
+            // Định nghĩa một component với tên là "button-counter"
+            Vue.component('button-counter', {
+            data: function () {
+                return {
+                count: 0
+                }
+            },
+            template: '<button v-on:click="count++">Bạn đã bấm {{ count }} lần.</button>'
+            })
+
+            new Vue({ el: '#components-demo' })            
+```
+
+> Vì là một đối tượng Vue nên component cũng có các option như _data_, _computed_, _watch_, _methods_ và các _hook trong vòng đời_ ngoại trừ __el__.
+
+> Ta có thể tái sử dụng component nhiều lần tuỳ ý.
+
+> VD:
+
+```html
+            <div id="components-demo">
+                <button-counter></button-counter>
+                <button-counter></button-counter>
+                <button-counter></button-counter>
+            </div>
+```
+
+> __Chú ý__: Option __data__ phải là một hàm vì nếu ta sử dụng lại component nhiều lần thì data luôn thay đổi khi ta thay đổi giá trị data ở một component trong các component đó. Cú pháp:
+
+> VD:
+```javascript
+            data: function () {
+                return {
+                    count: 0
+                }
+            }
+```
+
+> Bằng việc khai báo kiểu này, mỗi đối tượng component sẽ có bản sao data riêng rẽ nên khi data ở một component trong các component kia khi thay đổi sẽ không ảnh hưởng tới các component còn lại.
+
+#### Các cách viết Component
+> Các chú ý đầu tiên trước khi ta viết component là:
+
+- Option data phải là một hàm(như đã nói ở trên)
+- Tên component phải là __kebab-case__ hoặc __PascalCase__.
+
+> Có 2 cách viết Component là:
++   __Component toàn cục__
++   __Component cục bộ__
+> Sau đây chúng ta sẽ đi tìm hiểu về từng cách viết:
+##### Component toàn cục
+
+> Component toàn cục là component mà sử dụng ở bất kì Vue nào.
+
+> VD:
+
+```javascript
+            Vue.component('component-a', { /* ... */ })
+            Vue.component('component-b', { /* ... */ })
+            Vue.component('component-c', { /* ... */ })
+
+            new Vue({ el: '#app' })
+
+```
+
+```html
+<!--Chúng ta có thể viết trong Vue-->
+            <div id="app">
+            <component-a></component-a>
+            <component-b></component-b>
+            <component-c></component-c>
+            </div>
+
+<!--Hoặc trong chính nó-->
+            <div id="app">
+            <component-a>
+                <component-a></component-a>
+                <component-b></component-b>
+                <component-c></component-c>
+            </component-a>
+            </div>
+```
+
+##### Component cục bộ
+
+> Component cục bộ là component mà sử dụng chỉ bên trong đối tượng Vue chứa nó.
+
+> VD:
+
+```javascript
+            var ComponentA = { /* ... */ }
+            var ComponentB = { /* ... */ }
+            var ComponentC = { /* ... */ }
+
+            new Vue({
+            el: '#app'
+            components: {
+                'component-a': ComponentA,
+                'component-b': ComponentB
+            }
+            });
+            <!-- Hoặc -->
+
+            var ComponentA = { /* ... */ }
+
+            var ComponentB = {
+            components: {
+                'component-a': ComponentA
+            },
+            }
+```
+
+
 ### Vòng đời của một Component
 
 ![alt](https://github.com/win123456hy/SboxFrontEnd/blob/master/STEP%2010/lifecycle.png)
@@ -621,5 +747,92 @@ export default {
 + __beforeDestroy__: là hàm dùng khi ta muốn xoá đi các sự kiện không cần thiết sau khi component bị huỷ. Hàm được gọi trước khi component bị huỷ.
 + __destroyed__: là hàm được gọi khi component đã bị huỷ. Khi hook này được gọi, tất cả các chỉ thị của instance Vue đã được unbound, tất cả các event listeners đã được gỡ bỏ, và tất cả các instance Vue con cũng đã bị hủy.
 
-### Component
+### Pass data từ Component cha sang component con
 
+> Để nhận dữ liệu từ Component cha gửi xuống, Component con phải thêm một option đó là __props__.
+
+> Khi có giá trị được truyền xuống từ cha bằng việc binding hoặc truyền thằng giá trị, props sẽ trở thành property của Component con.
+
+> Một props có thể có bao nhiêu prop tuỳ ý và có thể nhận bất kì giá trị gì. Việc truy xuất props cũng giống với việc ta truy xuất với __data__.
+
+VD: Truyền mảng các bài post từ cha sang con.
+
+```javascript
+            Vue.component('blog-post', {
+            props: ['title'],
+            template: '<h3>{{ title }}</h3>'
+            })
+
+            new Vue({
+            el: '#blog-post-demo',
+            data: {
+                posts: [
+                { id: 1, title: 'Giới thiệu về Vue' },
+                { id: 2, title: 'Các khái niệm trong Vue' },
+                { id: 3, title: 'Vue căn bản và vô cùng nâng cao' }
+                ]
+            }
+            })
+```
+
+```html
+            <div id="blog-post-demo">
+                <blog-post
+                v-for="post in posts"
+                v-bind:key="post.id"
+                v-bind:title="post.title"
+                ></blog-post>
+            </div>
+```
+
+### Gửi data từ Component con sang component cha
+
+> Để gửi dữ liệu từ con sang cha ta sử dụng __$emit__ để phát ra sự kiện. Sau đó ở cha chúng ta sẽ bắt sự kiện đó và lấy dữ liệu từ đó.
+
+> __$emit__ có tham số đầu tiên là tên sự kiện gửi lên cha. Các tham số tiếp theo là các dữ liệu ta gửi lên cha. Chúng ta có thể thêm bao nhiêu tham số tuỳ ý. Dữ liệu ở đây là bất kì giá trị gì.
+
+> Ở phần cha sẽ nhận sự kiện từ con bằng __v-on__:[tên sự kiện phát ra từ con]="hàm". Hàm ở trong __v-on__ sẽ nhận các tham số dữ liệu là các tham số mà ta __$emit__ từ con lần lượt theo thứ tự ta viết từ con. Các tham số này chúng ta sẽ xử lý và tính toán với nó.
+
+> VD: 
+
+```javascript
+            Vue.component('blog-post', {
+            props: ['post'],
+            template: `
+                <div class="blog-post">
+                <h3>{{ post.title }}</h3>
+                <button v-on:click="$emit('enlarge-text',0.1)">
+                    Phóng to
+                </button>
+                <div v-html="post.content"></div>
+                </div>
+            `
+            })
+
+            new Vue({
+            el: '#blog-posts-events-demo',
+            data: {
+                posts: [/* ... */],
+                postFontSize: 1
+            },
+            methods: {
+                onEnlargeText: function (enlargeAmount) {
+                    this.postFontSize += enlargeAmount
+                }
+            }
+            })
+
+```
+
+```html
+            <div id="blog-posts-events-demo">
+                <div :style="{ fontSize: postFontSize + 'em' }">
+                    <blog-post
+                        v-on:enlarge-text="onEnlargeText"
+                        v-for="post in posts"
+                        v-bind:key="post.id"
+                        v-bind:post="post"
+                    ></blog-post>
+                </div>
+            </div>
+```

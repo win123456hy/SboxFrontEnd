@@ -3,19 +3,20 @@ var toDoApp = new Vue({
     el: "#toDoApp",
     data: {
         todos: [],
-        abc: "",
+        mainInput: "",
         temp: "",
-        stc: false
+        stc: false,
+        dbClick: false
     },
     computed: {
         showableTodos() {
-            if(this.temp === ''){
+            if (this.temp === '') {
                 return this.todos;
             }
-            if(this.temp === 'active'){
+            if (this.temp === 'active') {
                 return this.todos.filter(item => !item.status);
             }
-            if(this.temp === 'completed'){
+            if (this.temp === 'completed') {
                 return this.todos.filter(item => item.status);
             }
         },
@@ -33,19 +34,28 @@ var toDoApp = new Vue({
                 if (element.status == false)
                     count++;
             });
-            return count+" item left"
+            return count + " item left"
         }
     },
     methods: {
+        inputDblClick() {
+            this.dbClick = true;
+        },
         addData: function () {
-            if (this.abc != ""){
+            if (this.mainInput != "") {
                 this.todos.push({
-					id: this.todos.length + 1,
-                    do: this.abc,
+                    id: this.todos.length + 1,
+                    do: this.mainInput,
                     status: false
                 });
-			}
-            this.abc = "";
+            }
+            this.mainInput = "";
+        },
+        addDataFromDouble(todoText,id) {
+            if (todoText != "") {
+                this.todos[id].do = todoText;
+            }
+            this.dbClick = false;
         },
         deleteToDo: function (index) {
             this.todos.splice(index, 1);
@@ -55,11 +65,6 @@ var toDoApp = new Vue({
                 this.todos[index].status = true;
             else
                 this.todos[index].status = false;
-            /*  var a="";
-             for (let i = 0; i < this.todos.length; i++) {
-                 a+=this.todos[i].status;
-             }
-             alert(a); */
         },
         changeAll: function (stc) {
             if (stc) {
@@ -93,5 +98,5 @@ var toDoApp = new Vue({
         }
 
     }
- 
+
 });
